@@ -292,39 +292,40 @@ html, body {
 }
 
 .card-top { display: flex; align-items: center; gap: 18px; margin-bottom: 30px; }
-.block-asset { width: 46px; height: 46px; object-fit: contain; }
 
-.card-top h3 { font-size: 1.3rem; font-weight: 700; }
+.card-top h3 { font-size: 1.4rem; font-weight: 700; }
 .title-wood { color: #b07041; }
 .title-stone { color: #9494a6; }
 .title-gold { color: #f1c40f; }
 .title-diamond { color: #2bc4c4; }
-.title-netherite { color: #7a7373; }
+.title-netherite { color: #a876fa; }
 .title-thunder { color: #3b82f6; }
 
 .tier-wood { border-left: 4px solid #b07041; }
 .tier-stone { border-left: 4px solid #9494a6; }
 .tier-gold { border-left: 4px solid #f1c40f; }
 .tier-diamond { border-left: 4px solid #2bc4c4; }
-.tier-netherite { border-left: 4px solid #504646; }
+.tier-netherite { border-left: 4px solid #8a46ff; }
 .tier-thunder { border-left: 4px solid #3b82f6; }
 
 .featured-glow {
-    border: 1px solid #f1c40f !important;
-    border-left: 4px solid #f1c40f !important;
+    border: 1px solid #8a46ff !important;
+    border-left: 4px solid #8a46ff !important;
+    box-shadow: 0 0 30px rgba(138, 70, 255, 0.15);
 }
 
 .popular-ribbon {
     position: absolute;
     top: -12px;
     left: 30px;
-    background: #f1c40f;
-    color: #000;
+    background: #8a46ff;
+    color: #fff;
     padding: 3px 14px;
     border-radius: 20px;
     font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .card-price { font-size: 1.75rem; font-weight: 800; margin-top: 4px; }
@@ -349,9 +350,10 @@ html, body {
 
 .buy-wood { background: #1f1813; border: 1px solid #4a3425; }
 .buy-stone { background: #16161c; border: 1px solid #30303d; }
-.buy-gold { background: #f1c40f; color: #000; }
+.buy-gold { background: #1f1d11; border: 1px solid #4a3f1a; color: #f1c40f; }
 .buy-diamond { background: #0f2b30; border: 1px solid #1b4f57; color: #44f2f2; }
-.buy-netherite { background: #191421; border: 1px solid #36284a; color: #a876fa; }
+.buy-netherite { background: #8a46ff; color: #fff; } 
+.buy-netherite:hover { background: #7226da; }
 .buy-thunder { background: #0f1f38; border: 1px solid #1a3966; color: #4da3ff; }
 
 /* Perks and Virtual Panels */
@@ -382,6 +384,73 @@ html, body {
 .progress-track { height: 4px; background: #14122e; margin-top: 18px; position: relative; overflow: hidden; }
 .progress-fill { position: absolute; left: 0; top: 0; height: 100%; width: 50%; background: linear-gradient(90deg, #8a46ff, #3b82f6); }
 
+/* About Us Section Styling */
+.about-section {
+    padding: 100px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-top: 1px solid #110f2b;
+    background: radial-gradient(circle at 15% 80%, #0d0a21 0%, var(--bg-dark-hex) 60%);
+}
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-content h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.about-text {
+    font-size: 1.15rem;
+    color: #e2e0f0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.about-subtext {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.about-cta-box {
+    background: #09071c;
+    border: 1px solid #1e1947;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.about-cta-box p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #bfa3ff;
+}
+.btn-about-discord {
+    background: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn-about-discord:hover {
+    background: #4752c4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(88, 101, 242, 0.3);
+}
+
+/* Footer & Media Rules */
 .site-footer { background: #010104; padding: 50px 40px; text-align: center; border-top: 1px solid #0d0c1f; font-size: 0.88rem; color: var(--text-secondary); }
 .mojang-notice { font-size: 0.78rem; margin-top: 12px; opacity: 0.4; max-width: 600px; margin: 12px auto 0 auto; }
 
@@ -390,6 +459,7 @@ html, body {
     .hero-features-grid, .hero-actions, .hero-right { justify-content: center; }
     .banner-img { width: 300px; height: 300px; }
     .nav-menu { display: none; }
+    .about-content h2 { font-size: 2rem; }
 }
 @media(max-width: 640px) {
     .hero-title { font-size: 2.6rem; }
