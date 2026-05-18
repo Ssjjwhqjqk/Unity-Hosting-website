@@ -9,6 +9,14 @@
 </head>
 <body>
 
+    <div id="site-preloader" class="preloader-overlay">
+        <div class="preloader-content">
+            <div class="premium-spinner"></div>
+            <p class="loading-brand">Unity <span class="accent-text">Hosting</span></p>
+            <p class="loading-subtext">Allocating Node Infrastructure...</p>
+        </div>
+    </div>
+
     <header class="navbar">
         <div class="nav-container">
             <div class="logo-area">
@@ -276,6 +284,17 @@
         <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
         <p class="mojang-notice">Unity Hosting is an independent hosting provider and is not affiliated with Mojang Studios or Microsoft.</p>
     </footer>
+
+    <script>
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("site-preloader");
+            preloader.classList.add("fade-out");
+            // Completely unmount wrapper after transition completes to enable clicks
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 600);
+        });
+    </script>
 
 </body>
 </html>
