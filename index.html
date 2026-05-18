@@ -1,253 +1,391 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Hosting | Premium Minecraft Hosting</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-    <header class="navbar">
-        <div class="logo-area">
-            <img src="logo.jpg" alt="Unity Hosting Logo" class="nav-logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#minecraft" class="active">Minecraft</a></li>
-                <li><a href="#vps">VPS Hosting</a></li>
-                <li><a href="#bots">Discord Bots</a></li>
-                <li><a href="#about">About Us</a></li>
-            </ul>
-        </nav>
-        <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="client-btn"><i class="fa-solid fa-user"></i> Client Area</a>
-    </header>
+:root {
+    --bg-main: #03020a;
+    --bg-nav: rgba(4, 3, 14, 0.95);
+    --bg-card: #090816;
+    --text-white: #ffffff;
+    --text-muted: #79778e;
+}
 
-    <section class="hero">
-        <div class="hero-left">
-            <span class="badge-premium">PREMIUM MINECRAFT HOSTING</span>
-            <h1>Unity Hosting<br><span class="gradient-text">Minecraft Plans</span></h1>
-            <p class="hero-sub">Best budget friendly plans with top performance, 24/7 uptime and premium protection.</p>
-            
-            <div class="hero-features">
-                <div class="feature-item">
-                    <i class="fa-solid fa-bolt lightning-icon"></i>
-                    <div>
-                        <h4>99.9%</h4>
-                        <p>Uptime</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-shield-halved shield-icon"></i>
-                    <div>
-                        <h4>DDoS</h4>
-                        <p>Protection</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-headset support-icon"></i>
-                    <div>
-                        <h4>24/7</h4>
-                        <p>Support</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fa-solid fa-clock setup-icon"></i>
-                    <div>
-                        <h4>Instant</h4>
-                        <p>Setup</p>
-                    </div>
-                </div>
-            </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
 
-            <div class="hero-buttons">
-                <a href="#minecraft" class="btn-purple">View All Plans <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-dark-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
-            </div>
-        </div>
+/* Force dark background everywhere */
+html, body {
+    background-color: #03020a !important;
+    color: var(--text-white);
+    overflow-x: hidden;
+}
 
-        <div class="hero-right">
-            <img src="logo.jpg" alt="Unity Hosting Banner" class="giant-logo">
-        </div>
-    </section>
+/* Header Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #13112a;
+}
 
-    <section id="minecraft" class="plans-section">
-        <div class="section-title-area">
-            <span class="badge-mini">OUR MINECRAFT PLANS</span>
-            <h2>Choose the Best Plan for Your Server</h2>
-            <p>All plans include <span class="highlight-blue">Premium Panel</span> & <span class="highlight-pink">Advanced DDoS Protection</span></p>
-        </div>
+/* Fixes navbar logo stretching */
+.nav-logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
-        <div class="plans-grid">
-            <div class="plan-card border-wood">
-                <span class="tier-number">0</span>
-                <div class="card-header-row">
-                    <img src="https://minecraft.wiki/images/thumb/Oak_Log_%28UD%29_JE5_BE3.png/120px-Oak_Log_%28UD%29_JE5_BE3.png" alt="Wood" class="block-icon">
-                    <div>
-                        <h3>Wood Plan</h3>
-                        <div class="price">NPR 115 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 2GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 80% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 5GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-wood">Choose Plan</a>
-            </div>
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
 
-            <div class="plan-card border-stone">
-                <span class="tier-number">1</span>
-                <div class="card-header-row">
-                    <img src="https://minecraft.wiki/images/thumb/Stone_JE6_BE3.png/120px-Stone_JE6_BE3.png" alt="Stone" class="block-icon">
-                    <div>
-                        <h3>Stone Plan - 1</h3>
-                        <div class="price">NPR 260 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 4GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 150% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 15GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-stone">Choose Plan</a>
-            </div>
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-            <div class="plan-card border-gold popular-card">
-                <span class="popular-tag">Popular</span>
-                <span class="tier-number">2</span>
-                <div class="card-header-row">
-                    <img src="https://minecraft.wiki/images/thumb/Gold_Block_JE4_BE3.png/120px-Gold_Block_JE4_BE3.png" alt="Gold" class="block-icon">
-                    <div>
-                        <h3>Gold Plan - 2</h3>
-                        <div class="price">NPR 429 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 6GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 250% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 23GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-gold">Choose Plan</a>
-            </div>
+.nav-links a:hover {
+    color: var(--text-white);
+}
 
-            <div class="plan-card border-diamond">
-                <span class="tier-number">3</span>
-                <div class="card-header-row">
-                    <img src="https://minecraft.wiki/images/thumb/Diamond_Block_JE4_BE3.png/120px-Diamond_Block_JE4_BE3.png" alt="Diamond" class="block-icon">
-                    <div>
-                        <h3>Diamond Plan - 3</h3>
-                        <div class="price">NPR 869 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 12GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 350% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 35GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-diamond">Choose Plan</a>
-            </div>
+.client-btn {
+    background: #181236;
+    border: 1px solid #47269b;
+    color: #bfa3ff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
-            <div class="plan-card border-netherite">
-                <span class="tier-number">4</span>
-                <div class="card-header-row">
-                    <img src="https://minecraft.wiki/images/thumb/Block_of_Netherite_JE2_BE2.png/120px-Block_of_Netherite_JE2_BE2.png" alt="Netherite" class="block-icon">
-                    <div>
-                        <h3>Netherite Plan - 4</h3>
-                        <div class="price">NPR 1079 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 16GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 400% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 55GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-netherite">Choose Plan</a>
-            </div>
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 160px 8% 80px 8%;
+    min-height: 85vh;
+    background: radial-gradient(circle at 80% 20%, #120a33 0%, #03020a 70%) !important;
+}
 
-            <div class="plan-card border-thunder">
-                <span class="tier-number">5</span>
-                <div class="card-header-row">
-                    <div class="lightning-box">⚡</div>
-                    <div>
-                        <h3>Thunder Plan - 5</h3>
-                        <div class="price">NPR 2149 <span>/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 32GB RAM</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 600% CPU</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> 90GB Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Premium Panel</li>
-                    <li><i class="fa-solid fa-circle-check check-green"></i> Advance DDoS Protection</li>
-                </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-choose choose-thunder">Choose Plan</a>
-            </div>
-        </div>
-    </section>
+.hero-left {
+    max-width: 550px;
+}
 
-    <section class="bottom-features">
-        <div class="b-feat-card">
-            <i class="fa-solid fa-shield-halved b-icon icon-blue"></i>
-            <h3>Advanced DDoS Protection</h3>
-            <p>Enterprise grade protection to keep your server safe.</p>
-        </div>
-        <div class="b-feat-card">
-            <i class="fa-solid fa-rocket b-icon icon-purple"></i>
-            <h3>Instant Setup</h3>
-            <p>Your server will be ready in less than 1 minute.</p>
-        </div>
-        <div class="b-feat-card">
-            <i class="fa-solid fa-display b-icon icon-cyan"></i>
-            <h3>Premium Performance</h3>
-            <p>High performance hardware for lag-free experience.</p>
-        </div>
-        <div class="b-feat-card">
-            <i class="fa-solid fa-headset b-icon icon-blue2"></i>
-            <h3>24/7 Support</h3>
-            <p>Our support team is always here to help you.</p>
-        </div>
-    </section>
+.badge-premium {
+    background: rgba(138, 70, 255, 0.15);
+    color: #a370ff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
-    <div class="notice-container">
-        <div class="notice-box">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Other currency prices will be discussed in ticket or convert through Google.</span>
-        </div>
-    </div>
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-    <section id="vps" class="coming-soon-wrapper">
-        <h2>VPS Hosting & Domains</h2>
-        <div class="coming-grid">
-            <div class="coming-card">
-                <h3>VPS Nodes</h3>
-                <p>Status: <span class="loading-text">Configuring...</span></p>
-                <div class="mini-bar"></div>
-            </div>
-            <div class="coming-card">
-                <h3>Domain Registry</h3>
-                <p>Status: <span class="loading-text">In Development...</span></p>
-                <div class="mini-bar"></div>
-            </div>
-        </div>
-    </section>
+.gradient-text {
+    background: linear-gradient(90deg, #9d62ff, #4da8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    <footer>
-        <p>&copy; 2026 Unity Hosting. All rights reserved.</p>
-        <p class="mojang">Unity Hosting is not affiliated with Mojang Studios or Microsoft.</p>
-    </footer>
+.hero-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
 
-</body>
-</html>
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-item i {
+    font-size: 1.2rem;
+    background: #0d0b21;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #1a173d;
+}
+
+.lightning-icon { color: #a370ff; }
+.shield-icon { color: #4de3ff; }
+.support-icon { color: #ff70b3; }
+.setup-icon { color: #ffbe70; }
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-purple {
+    background: linear-gradient(90deg, #9146ff, #7226da);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-dark-discord {
+    background: #0f0e1c;
+    border: 1px solid #201e38;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Fixes the giant banner logo size */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.giant-logo {
+    width: 320px;
+    height: 320px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(138, 70, 255, 0.25);
+    object-fit: cover;
+}
+
+/* Plans Section */
+.plans-section {
+    padding: 80px 8%;
+    background-color: #03020a !important;
+}
+
+.section-title-area {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge-mini {
+    background: #0e0d24;
+    border: 1px solid #201e42;
+    color: #8a46ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.section-title-area h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.plan-card {
+    background-color: var(--bg-card) !important;
+    border-radius: 14px;
+    padding: 30px 25px;
+    position: relative;
+    border: 1px solid #13112a;
+}
+
+.tier-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: rgba(255,255,255,0.04);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.block-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.lightning-box {
+    width: 40px;
+    height: 40px;
+    background: #111b36;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #00bfff;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.price span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Borders */
+.border-wood { border-left: 4px solid #a0522d; }
+.border-stone { border-left: 4px solid #808080; }
+.border-gold { border-left: 4px solid #ffd700; }
+.border-diamond { border-left: 4px solid #00ffff; }
+.border-netherite { border-left: 4px solid #4a4141; }
+.border-thunder { border-left: 4px solid #00bfff; }
+
+.popular-card { border: 1px solid #ffd700 !important; border-left: 4px solid #ffd700 !important; }
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background: #ffd700;
+    color: black;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.specs-list { list-style: none; margin-bottom: 30px; }
+.specs-list li { font-size: 0.9rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.check-green { color: #2bd962; }
+
+.btn-choose {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.choose-wood { background: #261b14; border: 1px solid #4a301e; }
+.choose-stone { background: #1f2124; border: 1px solid #3f4247; }
+.choose-gold { background: #ffd700; color: black; }
+.choose-diamond { background: #133a40; border: 1px solid #246d78; color: #52f2f2; }
+.choose-netherite { background: #21192b; border: 1px solid #482c6b; color: #b07cf2; }
+.choose-thunder { background: #162a45; border: 1px solid #245087; color: #4fa1ff; }
+
+/* Bottom Highlights */
+.bottom-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 8%;
+    background-color: #03020a !important;
+}
+
+.b-feat-card {
+    background: #070612;
+    border: 1px solid #111024;
+    padding: 25px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.b-icon { font-size: 1.6rem; margin-bottom: 15px; }
+.icon-blue { color: #3b82f6; }
+.icon-purple { color: #a855f7; }
+.icon-cyan { color: #06b6d4; }
+.icon-blue2 { color: #6366f1; }
+
+.notice-container { padding: 20px 8% 60px 8%; background-color: #03020a !important; }
+.notice-box {
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #93c5fd;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Coming Soon Section */
+.coming-soon-wrapper {
+    padding: 60px 8%;
+    border-top: 1px solid #111024;
+    text-align: center;
+    background-color: #03020a !important;
+}
+
+.coming-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.coming-card { background: #070612; border: 1px dashed #201e3d; padding: 25px; border-radius: 10px; width: 280px; text-align: left; }
+.loading-text { color: #a855f7; font-weight: 600; }
+.mini-bar { height: 3px; background: #201e3d; margin-top: 15px; position: relative; overflow: hidden; }
+.mini-bar::after { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 40%; background: #a855f7; }
+
+footer {
+    background: #020105;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #0f0e1c;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+@media(max-width: 992px) {
+    .hero { flex-direction: column; text-align: center; padding-top: 120px; }
+    .hero-features, .hero-buttons { justify-content: center; }
+    .hero-right { margin-top: 40px; justify-content: center; }
+    .giant-logo { width: 240px; height: 240px; }
+    .nav-links { display: none; }
+}
