@@ -23,13 +23,14 @@
                 <img src="./logo.jpg" alt="Unity Hosting" class="nav-logo">
                 <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="mobileMenu">
                 <a href="./index.html" class="nav-link">Home</a>
                 <a href="./minecraft.html" class="nav-link active">Minecraft Plans</a>
                 <a href="./vps.html" class="nav-link">VPS Hosting</a>
                 <a href="./domains.html" class="nav-link">Domains</a>
             </nav>
             <div class="nav-actions">
+                <button class="nav-toggle" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
                 <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-client"><i class="fa-solid fa-user-shield"></i> Client Area</a>
             </div>
         </div>
@@ -167,10 +168,22 @@
     </footer>
 
     <script>
+        // Preloader Fade Out
         window.addEventListener("load", function () {
             const preloader = document.getElementById("site-preloader");
             preloader.classList.add("fade-out");
             setTimeout(() => { preloader.style.display = "none"; }, 600);
+        });
+
+        // Mobile Menu Toggling Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
         });
     </script>
 
