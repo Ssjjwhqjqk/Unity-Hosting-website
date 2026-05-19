@@ -149,6 +149,44 @@ html, body {
     box-shadow: 0 0 20px rgba(138, 70, 255, 0.25);
 }
 
+/* Mobile Responsive Hamburger Menu Architecture */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+@media(max-width: 1024px) {
+    .nav-toggle {
+        display: block; /* Shows the 3 lines on mobile screens */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hides the menu off-screen by default */
+        width: 70%;
+        height: 100vh;
+        background: rgba(6, 5, 18, 0.98);
+        border-left: 1px solid var(--border-subtle);
+        padding: 100px 40px;
+        gap: 24px;
+        transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 9999;
+    }
+
+    /* When the menu has the 'active' class, slide it into view */
+    .nav-menu.active {
+        right: 0;
+    }
+}
+
 /* Hero elements */
 .hero-section {
     padding: 180px 40px 100px 40px;
@@ -465,12 +503,11 @@ html, body {
 .site-footer { background: #010104; padding: 50px 40px; text-align: center; border-top: 1px solid #0d0c1f; font-size: 0.88rem; color: var(--text-secondary); }
 .mojang-notice { font-size: 0.78rem; margin-top: 12px; opacity: 0.4; max-width: 600px; margin: 12px auto 0 auto; }
 
-/* Responsive break points */
+/* Responsive layout overrides */
 @media(max-width: 1024px) {
     .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
     .hero-features-grid, .hero-actions, .hero-right { justify-content: center; }
     .banner-img { width: 300px; height: 300px; }
-    .nav-menu { display: none; }
 }
 @media(max-width: 640px) {
     .hero-title { font-size: 2.6rem; }
