@@ -25,7 +25,7 @@ html, body {
     width: 100%;
 }
 
-/* System Loading Preloader Overlay CSS */
+/* Preloader styles */
 .preloader-overlay {
     position: fixed;
     top: 0;
@@ -36,7 +36,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999999; /* Higher than everything else */
+    z-index: 999999;
     opacity: 1;
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -46,9 +46,7 @@ html, body {
     pointer-events: none;
 }
 
-.preloader-content {
-    text-align: center;
-}
+.preloader-content { text-align: center; }
 
 .premium-spinner {
     width: 50px;
@@ -80,7 +78,7 @@ html, body {
     100% { transform: rotate(360deg); }
 }
 
-/* Navbar */
+/* Navbar navigation architecture */
 .navbar {
     position: fixed;
     top: 0;
@@ -101,11 +99,7 @@ html, body {
     align-items: center;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.logo-area { display: flex; align-items: center; gap: 12px; }
 
 .nav-logo {
     width: 42px !important;
@@ -155,7 +149,7 @@ html, body {
     box-shadow: 0 0 20px rgba(138, 70, 255, 0.25);
 }
 
-/* Hero Section */
+/* Hero elements */
 .hero-section {
     padding: 180px 40px 100px 40px;
     max-width: 1400px;
@@ -293,7 +287,7 @@ html, body {
     100% { transform: translateY(0px); }
 }
 
-/* Pricing Grid */
+/* Pricing layouts */
 .pricing-section { padding: 100px 40px; max-width: 1400px; margin: 0 auto; }
 .section-header { text-align: center; margin-bottom: 70px; }
 
@@ -347,8 +341,8 @@ html, body {
 }
 
 .card-top { display: flex; align-items: center; gap: 18px; margin-bottom: 30px; }
-
 .card-top h3 { font-size: 1.4rem; font-weight: 700; }
+
 .title-wood { color: #b07041; }
 .title-stone { color: #9494a6; }
 .title-gold { color: #f1c40f; }
@@ -411,7 +405,7 @@ html, body {
 .buy-netherite:hover { background: #7226da; }
 .buy-thunder { background: #0f1f38; border: 1px solid #1a3966; color: #4da3ff; }
 
-/* Perks and Virtual Panels */
+/* Perks component matrix */
 .perks-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; padding: 60px 40px; max-width: 1400px; margin: 0 auto; }
 .perk-box { background: #060512; border: 1px solid #110f2b; padding: 35px 24px; border-radius: 14px; text-align: center; }
 .perk-i { font-size: 1.8rem; margin-bottom: 20px; display: block; }
@@ -425,7 +419,8 @@ html, body {
 .alert-section { padding: 0 40px 60px 40px; max-width: 1400px; margin: 0 auto; }
 .alert-pill { background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.15); padding: 14px 24px; border-radius: 10px; display: flex; align-items: center; gap: 14px; font-size: 0.88rem; color: #93c5fd; max-width: 720px; margin: 0 auto; }
 
-.enterprise-services-section { padding: 90px 40px; max-width: 1400px; margin: 0 auto; border-top: 1px solid #110f2b; }
+/* Services status blocks */
+.enterprise-services-section { padding: 90px 40px; max-width: 1400px; margin: 0 auto; }
 .enterprise-title { text-align: center; margin-bottom: 50px; }
 .enterprise-title h2 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
 .enterprise-title p { color: var(--text-secondary); }
@@ -439,7 +434,7 @@ html, body {
 .progress-track { height: 4px; background: #14122e; margin-top: 18px; position: relative; overflow: hidden; }
 .progress-fill { position: absolute; left: 0; top: 0; height: 100%; width: 50%; background: linear-gradient(90deg, #8a46ff, #3b82f6); }
 
-/* About Us Section Styling */
+/* Corporate profile sections */
 .about-section {
     padding: 100px 40px;
     max-width: 1400px;
@@ -447,77 +442,37 @@ html, body {
     border-top: 1px solid #110f2b;
     background: radial-gradient(circle at 15% 80%, #0d0a21 0%, var(--bg-dark-hex) 60%);
 }
-.about-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-.about-content h2 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-top: 16px;
-    margin-bottom: 24px;
-}
-.about-text {
-    font-size: 1.15rem;
-    color: #e2e0f0;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-.about-subtext {
-    font-size: 0.98rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
+.about-container { max-width: 900px; margin: 0 auto; text-align: center; }
+.about-content h2 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-top: 16px; margin-bottom: 24px; }
+.about-text { font-size: 1.15rem; color: #e2e0f0; line-height: 1.7; margin-bottom: 20px; }
+.about-subtext { font-size: 0.98rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 40px; }
 .about-cta-box {
-    background: #09071c;
-    border: 1px solid #1e1947;
-    padding: 30px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    background: #09071c; border: 1px solid #1e1947; padding: 30px; border-radius: 16px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
 }
-.about-cta-box p {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #bfa3ff;
-}
+.about-cta-box p { font-size: 0.95rem; font-weight: 500; color: #bfa3ff; }
 .btn-about-discord {
-    background: #5865F2;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.92rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    background: #5865F2; color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 8px;
+    font-weight: 600; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 10px;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 .btn-about-discord:hover {
-    background: #4752c4;
-    transform: translateY(-2px);
+    background: #4752c4; transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(88, 101, 242, 0.3);
 }
 
-/* Footer & Media Rules */
+/* Footer layout dimensions */
 .site-footer { background: #010104; padding: 50px 40px; text-align: center; border-top: 1px solid #0d0c1f; font-size: 0.88rem; color: var(--text-secondary); }
 .mojang-notice { font-size: 0.78rem; margin-top: 12px; opacity: 0.4; max-width: 600px; margin: 12px auto 0 auto; }
 
+/* Responsive break points */
 @media(max-width: 1024px) {
     .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
     .hero-features-grid, .hero-actions, .hero-right { justify-content: center; }
     .banner-img { width: 300px; height: 300px; }
     .nav-menu { display: none; }
-    .about-content h2 { font-size: 2rem; }
 }
 @media(max-width: 640px) {
     .hero-title { font-size: 2.6rem; }
-    .hero-features-grid { grid-template-columns: 1fr; }
-    .hero-actions { flex-direction: column; }
-}
+    }
+             
