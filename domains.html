@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Registry | Unity Hosting</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="site-preloader" class="preloader-overlay">
+        <div class="preloader-content">
+            <div class="premium-spinner"></div>
+            <p class="loading-brand">Unity <span class="accent-text">Hosting</span></p>
+            <p class="loading-subtext">Connecting TLD Registry APIs...</p>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="./logo.jpg" alt="Unity Hosting" class="nav-logo">
+                <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./minecraft.html" class="nav-link">Minecraft Plans</a>
+                <a href="./vps.html" class="nav-link">VPS Hosting</a>
+                <a href="./domains.html" class="nav-link active">Domains</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-client"><i class="fa-solid fa-user-shield"></i> Client Area</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="enterprise-services-section" style="padding-top: 180px; min-height: 80vh;">
+        <div class="enterprise-title">
+            <div class="mini-badge" style="margin-bottom:15px;">GLOBAL REGISTRY</div>
+            <h2>TLD Domain Registry</h2>
+            <p>Secure your brand identity instantly across global top-level domains.</p>
+        </div>
+        <div class="services-row">
+            <div class="service-card-soon">
+                <div class="soon-top">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>TLD Domain Registry</h3>
+                </div>
+                <p class="status-msg">Status: <span class="blink-purple">System API Integrations</span></p>
+                <div class="progress-track"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
+        <p class="mojang-notice">Unity Hosting is an independent hosting provider and is not affiliated with Mojang Studios or Microsoft.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("site-preloader");
+            preloader.classList.add("fade-out");
+            setTimeout(() => { preloader.style.display = "none"; }, 600);
+        });
+    </script>
+
+</body>
+</html>
