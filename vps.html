@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
     <link rel="shortcut icon" href="./favicons/favicon.ico">
     <link rel="manifest" href="./favicons/site.webmanifest" crossorigin="use-credentials">
+    
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -173,14 +174,17 @@
     </footer>
 
     <script>
+        // Preloader Fade Out Trigger
         window.addEventListener("load", function () {
             const preloader = document.getElementById("site-preloader");
             preloader.classList.add("fade-out");
             setTimeout(() => { preloader.style.display = "none"; }, 600);
         });
 
+        // Mobile Menu Interactivity Runtime
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
+
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             const icon = menuBtn.querySelector('i');
@@ -188,5 +192,6 @@
             icon.classList.toggle('fa-xmark');
         });
     </script>
+
 </body>
 </html>
