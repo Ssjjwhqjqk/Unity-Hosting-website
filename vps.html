@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPS Cloud Platforms | Unity Hosting</title>
-    <link rel="icon" type="image/jpeg" href="./logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="./favicons/favicon.ico">
+    <link rel="manifest" href="./favicons/site.webmanifest" crossorigin="use-credentials">
+    
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -37,23 +42,131 @@
         </div>
     </header>
 
-    <section class="enterprise-services-section" style="padding-top: 180px; min-height: 80vh;">
-        <div class="enterprise-title">
-            <div class="mini-badge" style="margin-bottom:15px;">CLOUD INSTANCES</div>
-            <h2>Scalable Infrastructure Solutions</h2>
-            <p>Deploy highly isolated custom environments using next-generation virtualization platforms.</p>
+    <section class="pricing-section" style="padding-top: 160px;">
+        <div class="section-header">
+            <div class="mini-badge">ENTERPRISE CLOUD</div>
+            <h2>High-Tier VPS Virtual Machines</h2>
+            <p>Deploy lightning-fast instances powered by <span class="text-blue">Intel Xeon Compute Nodes</span> & ultra-low latency <span class="text-pink">NVMe SSD Arrays</span></p>
         </div>
-        <div class="services-row">
-            <div class="service-card-soon">
-                <div class="soon-top">
-                    <i class="fa-solid fa-server"></i>
-                    <h3>High-Tier VPS Nodes</h3>
+
+        <div class="pricing-grid">
+            <div class="pricing-card tier-stone">
+                <div class="tier-id">XS</div>
+                <div class="card-top">
+                    <div>
+                        <h3>Standard XS</h3>
+                        <div class="card-price">NPR 640<span class="period">/ Month</span></div>
+                    </div>
                 </div>
-                <p class="status-msg">Status: <span class="blink-purple">Configuring Node Architecture</span></p>
-                <div class="progress-track"><div class="progress-fill"></div></div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 2 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 4GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 25 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 2TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #3b82f6;"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-stone">Deploy Server</a>
+            </div>
+
+            <div class="pricing-card tier-stone">
+                <div class="tier-id">S</div>
+                <div class="card-top">
+                    <div>
+                        <h3>Standard S</h3>
+                        <div class="card-price">NPR 1,000<span class="period">/ Month</span></div>
+                    </div>
+                </div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 4 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 8GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 40 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 3TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #3b82f6;"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-stone">Deploy Server</a>
+            </div>
+
+            <div class="pricing-card tier-netherite featured-glow">
+                <div class="popular-ribbon">Popular</div>
+                <div class="tier-id">M</div>
+                <div class="card-top">
+                    <div>
+                        <h3 class="title-netherite">Standard M</h3>
+                        <div class="card-price">NPR 1,500<span class="period">/ Month</span></div>
+                    </div>
+                </div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 6 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 16GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 80 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 4TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #8a46ff;"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-netherite">Deploy Server</a>
+            </div>
+
+            <div class="pricing-card tier-diamond">
+                <div class="tier-id">L</div>
+                <div class="card-top">
+                    <div>
+                        <h3 class="title-diamond">Standard L</h3>
+                        <div class="card-price">NPR 2,700<span class="period">/ Month</span></div>
+                    </div>
+                </div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 8 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 32GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 150 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 5TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #2bc4c4;"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-diamond">Deploy Server</a>
+            </div>
+
+            <div class="pricing-card tier-gold">
+                <div class="tier-id">XL</div>
+                <div class="card-top">
+                    <div>
+                        <h3 class="title-gold">Standard XL</h3>
+                        <div class="card-price">NPR 3,400<span class="period">/ Month</span></div>
+                    </div>
+                </div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 12 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 48GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 200 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 5.5TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #f1c40f;"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-gold">Deploy Server</a>
+            </div>
+
+            <div class="pricing-card tier-thunder">
+                <div class="tier-id">XXL</div>
+                <div class="card-top">
+                    <div>
+                        <h3 class="title-thunder">Standard XXL</h3>
+                        <div class="card-price">NPR 4,350<span class="period">/ Month</span></div>
+                    </div>
+                </div>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 14 vCores</li>
+                    <li><i class="fa-solid fa-memory"></i> 64GB RAM Allocation</li>
+                    <li><i class="fa-solid fa-database"></i> 250 GB NVMe Storage</li>
+                    <li><i class="fa-solid fa-network-wired"></i> 6TB Bandwidth · 1 Gbps</li>
+                    <li><i class="fa-solid fa-circle-check"></i> KVM Virtualization Platform</li>
+                </ul>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-thunder">Deploy Server</a>
             </div>
         </div>
     </section>
+
+    <div class="alert-section">
+        <div class="alert-pill">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>All virtual machine arrays are delivered with absolute Root SSH permissions and localized custom OS installations.</p>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
@@ -61,14 +174,14 @@
     </footer>
 
     <script>
-        // Preloader Fade Out
+        // Preloader Fade Out Trigger
         window.addEventListener("load", function () {
             const preloader = document.getElementById("site-preloader");
             preloader.classList.add("fade-out");
             setTimeout(() => { preloader.style.display = "none"; }, 600);
         });
 
-        // Mobile Menu Toggling Logic
+        // Mobile Menu Interactivity Runtime
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
