@@ -69,27 +69,6 @@
         </div>
     </section>
 
-    <div class="unity-chat-widget">
-        <button class="chat-toggle-btn" onclick="toggleChatWindow()"><i class="fa-solid fa-comments"></i></button>
-        <div class="chat-window" id="unityChatWindow">
-            <div class="chat-header">
-                <img src="./logo.jpg" alt="Unity AI" class="chat-avatar">
-                <div>
-                    <h4>Unity AI Assistant</h4>
-                    <p><span class="status-dot"></span> Online · Automated Support</p>
-                </div>
-                <button class="chat-close" onclick="toggleChatWindow()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="chat-body" id="chatBody">
-                <div class="message bot-msg">Hello! 👋 Welcome to Unity Hosting support. Ask me anything about our Minecraft nodes, VPS servers, or domains!</div>
-            </div>
-            <div class="chat-footer">
-                <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleChatKey(event)">
-                <button onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
-
     <footer class="site-footer">
         <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
         <p class="mojang-notice">Unity Hosting is an independent hosting provider and is not affiliated with Mojang Studios or Microsoft.</p>
@@ -110,37 +89,6 @@
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
         });
-
-        function toggleChatWindow() { document.getElementById('unityChatWindow').classList.toggle('active'); }
-        function handleChatKey(e) { if (e.key === 'Enter') sendChatMessage(); }
-        function sendChatMessage() {
-            const input = document.getElementById('userInput');
-            const text = input.value.trim();
-            if (!text) return;
-            const body = document.getElementById('chatBody');
-            const userDiv = document.createElement('div');
-            userDiv.className = 'message user-msg';
-            userDiv.innerText = text;
-            body.appendChild(userDiv);
-            input.value = '';
-            body.scrollTop = body.scrollHeight;
-            setTimeout(() => {
-                const botDiv = document.createElement('div');
-                botDiv.className = 'message bot-msg';
-                const lowerText = text.toLowerCase();
-                let reply = "To get support, deploy instances, or register plans, open a ticket inside our <strong><a href='https://discord.gg/SBJPW7dRhM' target='_blank' style='color:#bfa3ff; text-decoration:underline;'>Discord Server</a></strong> where our team can assist you instantly!";
-                if (lowerText.includes('minecraft') || lowerText.includes('ram') || lowerText.includes('server')) {
-                    reply = "Our premium Minecraft nodes start at just NPR 115/month up to 32GB RAM (Thunder Plan)! You can view options on our <strong><a href='./minecraft.html' style='color:#bfa3ff; text-decoration:underline;'>Minecraft Plans page</a></strong>.";
-                } else if (lowerText.includes('vps') || lowerText.includes('cpu') || lowerText.includes('xeon')) {
-                    reply = "We offer high-performance Intel Xeon VPS plans ranging from 2 vCores to 14 vCores. Check them out on our <strong><a href='./vps.html' style='color:#bfa3ff; text-decoration:underline;'>VPS Hosting page</a></strong>!";
-                } else if (lowerText.includes('domain') || lowerText.includes('.com') || lowerText.includes('website')) {
-                    reply = "We offer .com, .net, .org, and .xyz domain mapping. Open a ticket in our Discord server to view live top-level extensions and register your name instantly!";
-                }
-                botDiv.innerHTML = reply;
-                body.appendChild(botDiv);
-                body.scrollTop = body.scrollHeight;
-            }, 800);
-        }
     </script>
 </body>
 </html>
