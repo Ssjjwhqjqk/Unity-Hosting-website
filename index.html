@@ -8,18 +8,56 @@
 
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+.quick-nav{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+.quick-btn{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    text-decoration:none;
+    color:#fff;
+    transition:0.25s;
+}
+
+.quick-btn i{
+    font-size:22px;
+    margin-bottom:8px;
+    color:#6c5ce7;
+}
+
+.quick-btn:hover{
+    transform:translateY(-5px);
+    border-color:#6c5ce7;
+    background:rgba(108,92,231,0.15);
+}
+
+@media(max-width:900px){
+    .quick-nav{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .quick-nav{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
-
-<!-- PRELOADER -->
-<div id="site-preloader" class="preloader-overlay">
-    <div class="preloader-content">
-        <div class="premium-spinner"></div>
-        <p class="loading-brand">Unity <span class="accent-text">Hosting</span></p>
-        <p class="loading-subtext">Initializing secure global systems...</p>
-    </div>
-</div>
 
 <!-- NAVBAR -->
 <header class="navbar">
@@ -30,18 +68,9 @@
             <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
         </div>
 
-        <nav class="nav-menu" id="mobileMenu">
-            <a href="./index.html" class="nav-link active">Home</a>
-            <a href="https://discord.gg/SBJPW7dRhM" class="nav-link">Community</a>
-        </nav>
-
         <div class="nav-actions">
-            <button class="nav-toggle" id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-client">
-                Join
+            <a href="https://discord.gg/SBJPW7dRhM" class="btn-client">
+                Join Discord
             </a>
         </div>
 
@@ -55,22 +84,41 @@
         <div class="hero-content">
 
             <div class="premium-tag">
-                🇳🇵 NEPAL • GLOBAL INFRASTRUCTURE NETWORK
+                🇳🇵 BUILT IN NEPAL • GLOBAL CLOUD INFRASTRUCTURE
             </div>
 
             <h1 class="hero-title">
-                Reliable & High Performance<br>
-                <span class="gradient-title">Cloud Infrastructure</span>
+                Fast & Reliable<br>
+                <span class="gradient-title">Hosting Platform</span>
             </h1>
 
             <p class="hero-subtitle">
-                Secure, scalable, and ultra-fast hosting solutions built for modern digital systems.
+                High-performance infrastructure designed for speed, stability, and scalability.
             </p>
 
-            <div class="hero-actions">
-                <a href="https://discord.gg/SBJPW7dRhM" class="btn-primary-purple">
-                    Get Started
+            <!-- QUICK NAV BUTTONS -->
+            <div class="quick-nav">
+
+                <a href="./minecraft.html" class="quick-btn">
+                    <i class="fa-solid fa-gamepad"></i>
+                    Minecraft
                 </a>
+
+                <a href="./vps.html" class="quick-btn">
+                    <i class="fa-solid fa-server"></i>
+                    VPS
+                </a>
+
+                <a href="./domains.html" class="quick-btn">
+                    <i class="fa-solid fa-globe"></i>
+                    Domains
+                </a>
+
+                <a href="./cloud.html" class="quick-btn">
+                    <i class="fa-solid fa-cloud"></i>
+                    Cloud
+                </a>
+
             </div>
 
         </div>
@@ -80,27 +128,8 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-    <p>© 2026 Unity Hosting. All rights reserved.</p>
+    <p>© 2026 Unity Hosting</p>
 </footer>
-
-<!-- SCRIPT -->
-<script>
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("site-preloader");
-    preloader.classList.add("fade-out");
-    setTimeout(() => preloader.style.display = "none", 600);
-});
-
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    const icon = menuBtn.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-xmark');
-});
-</script>
 
 </body>
 </html>
