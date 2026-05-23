@@ -4,200 +4,354 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unity Hosting | High Performance Game & Cloud Servers</title>
+<title>Unity Hosting | Premium VPS & Minecraft Hosting Nepal</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="description" content="Unity Hosting offers premium VPS hosting, Minecraft hosting, domains and powerful servers with fast performance and uptime.">
+
+<meta name="keywords" content="Unity Hosting, VPS Hosting Nepal, Minecraft Hosting Nepal, Domains Nepal, Cheap VPS">
+
+<meta name="author" content="Unity Hosting">
+
+<meta property="og:title" content="Unity Hosting">
+<meta property="og:description" content="Premium Hosting Solutions">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unityhosting.online">
+
+<link rel="icon" href="favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#0b0f1a;
-    color:#fff;
+background:#070b14;
+color:white;
+overflow-x:hidden;
 }
 
-/* HERO */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#4da3ff;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#4da3ff;
+}
+
 .hero{
-    position:relative;
-    padding:120px 20px 80px;
-    text-align:center;
-    overflow:hidden;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1920') center/cover;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    background:radial-gradient(circle,#6c5ce7,transparent 60%);
-    top:-200px;
-    left:50%;
-    transform:translateX(-50%);
-    filter:blur(80px);
-    z-index:0;
+.hero-content{
+max-width:850px;
 }
 
 .hero h1{
-    font-size:52px;
-    margin:0;
-    position:relative;
-    z-index:1;
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#4da3ff;
 }
 
 .hero p{
-    max-width:700px;
-    margin:20px auto;
-    color:#b5b5b5;
-    line-height:1.6;
-    position:relative;
-    z-index:1;
+font-size:20px;
+color:#ccc;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 26px;
-    margin:10px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
+padding:14px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
-.btn-primary{ background:#6c5ce7; color:#fff; }
-.btn-dark{ background:#1c2235; color:#fff; }
+.primary{
+background:#4da3ff;
+color:white;
+}
 
-/* NAV LINKS SECTION (REPLACED PRICING) */
+.primary:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px #4da3ff;
+}
+
+.secondary{
+border:2px solid #4da3ff;
+color:#4da3ff;
+}
+
+.secondary:hover{
+background:#4da3ff;
+color:white;
+}
+
 .quick-links{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    padding:60px 10%;
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
-.link-card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:30px;
-    text-align:center;
-    border-radius:16px;
-    text-decoration:none;
-    color:#fff;
-    transition:0.3s;
+.quick-links a{
+background:#101827;
+padding:14px 22px;
+border-radius:14px;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
 }
 
-.link-card i{
-    font-size:28px;
-    margin-bottom:10px;
-    color:#6c5ce7;
+.quick-links a:hover{
+background:#4da3ff;
+transform:translateY(-3px);
 }
 
-.link-card:hover{
-    transform:translateY(-6px);
-    border-color:#6c5ce7;
-}
-
-/* FEATURES */
 .features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px 10% 60px;
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.3s;
+background:#101827;
+padding:35px;
+border-radius:20px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#6c5ce7;
+transform:translateY(-5px);
+border-color:#4da3ff;
 }
 
-/* FOOTER */
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+color:#bdbdbd;
+line-height:1.7;
+}
+
+.stats{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat-box{
+background:#101827;
+padding:35px;
+border-radius:18px;
+}
+
+.stat-box h2{
+font-size:42px;
+color:#4da3ff;
+margin-bottom:10px;
+}
+
 footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid rgba(255,255,255,0.1);
+padding:30px;
+text-align:center;
+background:#05080f;
+color:#888;
+margin-top:50px;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
-    .hero h1{ font-size:36px; }
 
-    .quick-links{
-        grid-template-columns:1fr;
-    }
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+display:none;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+<div class="logo">Unity Hosting</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="vps.html">VPS</a>
+<a href="minecraft.html">Minecraft</a>
+<a href="domain.html">Domains</a>
+<a href="https://panel.unityhosting.online">Panel</a>
+</nav>
+</header>
+
 <section class="hero">
-    <h1>Powerful Game & Cloud Hosting</h1>
-    <p>
-        Unity Hosting delivers high-performance Minecraft, VPS, and domain services built for speed, stability, and scalability.
-        Built in Nepal, trusted globally.
-    </p>
 
-    <a href="./minecraft.html" class="btn btn-primary">Get Started</a>
-    <a href="https://discord.gg/SBJPW7dRhM" class="btn btn-dark" target="_blank">
-        <i class="fa-brands fa-discord"></i> Join Discord
-    </a>
-</section>
+<div class="hero-content">
 
-<!-- QUICK LINKS (REPLACED PRICING) -->
-<section class="quick-links">
+<h1>Premium <span>Unity Hosting</span> Services</h1>
 
-    <a href="./minecraft.html" class="link-card">
-        <i class="fa-solid fa-gamepad"></i>
-        <h3>Minecraft Servers</h3>
-        <p>High-performance game hosting</p>
-    </a>
+<p>
+Fast VPS hosting, Minecraft hosting and powerful infrastructure
+with premium uptime and high performance servers.
+</p>
 
-    <a href="./vps.html" class="link-card">
-        <i class="fa-solid fa-server"></i>
-        <h3>VPS Hosting</h3>
-        <p>Powerful virtual machines</p>
-    </a>
+<div class="buttons">
+<a href="vps.html" class="btn primary">Get Started</a>
+<a href="https://panel.unityhosting.online" class="btn secondary">Client Panel</a>
+</div>
 
-    <a href="./domains.html" class="link-card">
-        <i class="fa-solid fa-globe"></i>
-        <h3>Domains</h3>
-        <p>Register & manage domains</p>
-    </a>
+<div class="quick-links">
+<a href="vps.html">⚡ VPS Hosting</a>
+<a href="minecraft.html">🎮 Minecraft Hosting</a>
+<a href="domain.html">🌐 Domains</a>
+</div>
+
+</div>
 
 </section>
 
-<!-- FEATURES -->
 <section class="features">
 
-    <div class="card">
-        <h3>⚡ High Performance</h3>
-        <p>Optimized servers for gaming and VPS workloads.</p>
-    </div>
+<h2 class="section-title">Why Choose Unity Hosting?</h2>
 
-    <div class="card">
-        <h3>🛡 DDoS Protection</h3>
-        <p>Enterprise-level protection keeps servers online 24/7.</p>
-    </div>
+<div class="feature-grid">
 
-    <div class="card">
-        <h3>🌍 Global Network</h3>
-        <p>Low latency routing for smooth global performance.</p>
-    </div>
+<div class="card">
+<h3>⚡ High Performance</h3>
+<p>Premium hardware with blazing fast SSD storage and optimized infrastructure.</p>
+</div>
+
+<div class="card">
+<h3>🛡️ DDoS Protection</h3>
+<p>Enterprise-grade protection keeps your servers safe from attacks and downtime.</p>
+</div>
+
+<div class="card">
+<h3>🌎 Global Uptime</h3>
+<p>Reliable hosting with stable performance and 99.9% network uptime.</p>
+</div>
+
+<div class="card">
+<h3>💬 24/7 Support</h3>
+<p>Quick support through Discord and ticket systems whenever you need help.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-box">
+<h2>99.9%</h2>
+<p>Uptime</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+<div class="stat-box">
+<h2>SSD</h2>
+<p>Storage</p>
+</div>
+
+<div class="stat-box">
+<h2>Fast</h2>
+<p>Network</p>
+</div>
 
 </section>
 
 <footer>
-    <p>© 2026 Unity Hosting. All rights reserved.</p>
-    <p>Independent provider, not affiliated with Mojang or Microsoft.</p>
+
+© 2026 Unity Hosting — Premium Hosting Solutions
+
 </footer>
+
+<script>
+document.addEventListener("mousemove",(e)=>{
+document.body.style.backgroundPosition =
+`${e.clientX/50}px ${e.clientY/50}px`;
+});
+</script>
 
 </body>
 </html>
