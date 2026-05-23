@@ -8,20 +8,13 @@
 
 <title>Unity Hosting | Premium VPS & Minecraft Hosting Nepal</title>
 
-<meta name="description" content="Unity Hosting offers premium VPS hosting, Minecraft hosting, domains and powerful servers with fast performance and uptime in Nepal.">
-
-<meta name="keywords" content="Unity Hosting, VPS Hosting Nepal, Minecraft Hosting Nepal, Domains Nepal, Hosting Nepal">
+<meta name="description" content="Unity Hosting provides VPS, Minecraft hosting and domains with high performance servers in Nepal.">
 
 <meta property="og:title" content="Unity Hosting">
-<meta property="og:description" content="Premium Hosting Solutions from Nepal">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Premium Hosting from Nepal">
 
-<!-- FAVICONS -->
 <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -36,10 +29,8 @@ font-family:'Poppins',sans-serif;
 body{
 background:#070b14;
 color:white;
-overflow-x:hidden;
 }
 
-/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -49,10 +40,9 @@ padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(12px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
@@ -64,10 +54,27 @@ font-weight:700;
 color:#4da3ff;
 }
 
+/* LOGO FIX */
 .logo img{
-width:35px;
-height:35px;
+width:38px;
+height:38px;
+object-fit:cover;
 border-radius:8px;
+display:block;
+}
+
+/* fallback if image fails */
+.logo-fallback{
+width:38px;
+height:38px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#101827;
+border-radius:8px;
+font-size:14px;
+color:#4da3ff;
+font-weight:700;
 }
 
 /* NAV */
@@ -80,7 +87,6 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:500;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -100,49 +106,28 @@ linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
 url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1920') center/cover;
 }
 
-.hero-content{
-max-width:900px;
-}
-
 .hero h1{
 font-size:60px;
-line-height:1.1;
 }
 
-.hero h1 span{
+.hero span{
 color:#4da3ff;
 }
 
-.hero p{
-font-size:18px;
-color:#d0d0d0;
+.nepal{
 margin-top:15px;
-line-height:1.6;
-}
-
-/* NEPAL TAG */
-.nepal-tag{
-margin-top:15px;
-font-size:18px;
-color:#00ff9d;
+color:#00ff99;
 font-weight:600;
 }
 
 /* BUTTONS */
-.buttons{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
 .btn{
-padding:14px 28px;
+display:inline-block;
+margin-top:20px;
+padding:14px 26px;
 border-radius:12px;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
 }
 
 .primary{
@@ -150,82 +135,9 @@ background:#4da3ff;
 color:white;
 }
 
-.primary:hover{
-transform:translateY(-3px);
-}
-
 .secondary{
 border:2px solid #4da3ff;
 color:#4da3ff;
-}
-
-.secondary:hover{
-background:#4da3ff;
-color:white;
-}
-
-.quick{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.quick a{
-background:#101827;
-padding:12px 18px;
-border-radius:12px;
-text-decoration:none;
-color:white;
-transition:0.3s;
-}
-
-.quick a:hover{
-background:#4da3ff;
-}
-
-/* SECTION */
-.section{
-padding:90px 8%;
-text-align:center;
-}
-
-.section h2{
-font-size:40px;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#101827;
-padding:30px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#4da3ff;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-color:#888;
-background:#05080f;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:38px;}
-nav{display:none;}
 }
 
 </style>
@@ -234,12 +146,20 @@ nav{display:none;}
 
 <body>
 
-<!-- HEADER -->
 <header>
 
 <div class="logo">
-<img src="logo.jpg" alt="Unity Hosting Logo">
+
+<!-- LOGO FIXED HERE -->
+<img src="logo.jpg" alt="Unity Hosting Logo"
+onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';">
+
+<div id="fallback" class="logo-fallback" style="display:none;">
+UH
+</div>
+
 Unity Hosting
+
 </div>
 
 <nav>
@@ -247,75 +167,30 @@ Unity Hosting
 <a href="vps.html">VPS</a>
 <a href="minecraft.html">Minecraft</a>
 <a href="domain.html">Domains</a>
-<a href="https://panel.unityhosting.online">Panel</a>
 </nav>
 
 </header>
 
-<!-- HERO -->
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>Premium <span>Unity Hosting</span></h1>
 
-<p>
-Fast VPS, Minecraft & Domain hosting with high performance servers and uptime.
-</p>
+<p>Fast VPS & Minecraft Hosting with high performance servers</p>
 
-<div class="nepal-tag">
-🇳🇵 Proudly Presenting Hosting Services from Nepal
+<div class="nepal">
+🇳🇵 Proudly Hosting from Nepal
 </div>
 
-<div class="buttons">
+<br>
+
 <a href="vps.html" class="btn primary">Get Started</a>
-<a href="https://panel.unityhosting.online" class="btn secondary">Client Panel</a>
-</div>
-
-<div class="quick">
-<a href="vps.html">⚡ VPS Hosting</a>
-<a href="minecraft.html">🎮 Minecraft Hosting</a>
-<a href="domain.html">🌐 Domains</a>
-</div>
+<a href="https://panel.unityhosting.online" class="btn secondary">Panel</a>
 
 </div>
 
 </section>
-
-<!-- FEATURES -->
-<section class="section">
-
-<h2>Why Choose Us</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>⚡ Speed</h3>
-<p>Ultra fast SSD servers for maximum performance.</p>
-</div>
-
-<div class="card">
-<h3>🛡️ Security</h3>
-<p>Protected with advanced DDoS protection systems.</p>
-</div>
-
-<div class="card">
-<h3>🌍 Nepal Based</h3>
-<p>Local hosting brand proudly built in Nepal.</p>
-</div>
-
-<div class="card">
-<h3>💬 Support</h3>
-<p>24/7 support through Discord and tickets.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Unity Hosting — Proudly from Nepal 🇳🇵
-</footer>
 
 </body>
 </html>
