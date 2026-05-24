@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPS Cloud Platforms | Unity Hosting</title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
     <link rel="shortcut icon" href="./favicons/favicon.ico">
     <link rel="manifest" href="./favicons/site.webmanifest" crossorigin="use-credentials">
-    
+
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
+    <!-- PRELOADER -->
     <div id="site-preloader" class="preloader-overlay">
         <div class="preloader-content">
             <div class="premium-spinner"></div>
@@ -23,173 +26,179 @@
         </div>
     </div>
 
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-container">
+
             <div class="logo-area">
                 <img src="./logo.jpg" alt="Unity Hosting" class="nav-logo">
                 <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
             </div>
+
             <nav class="nav-menu" id="mobileMenu">
                 <a href="./index.html" class="nav-link">Home</a>
                 <a href="./minecraft.html" class="nav-link">Minecraft Plans</a>
                 <a href="./vps.html" class="nav-link active">VPS Hosting</a>
                 <a href="./domains.html" class="nav-link">Domains</a>
             </nav>
+
             <div class="nav-actions">
-                <button class="nav-toggle" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-client"><i class="fa-solid fa-user-shield"></i> Client Area</a>
+
+                <button class="nav-toggle" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- FIXED: Client Area now goes to PANEL -->
+                <a href="https://panel.unityhosting.online/" target="_blank" class="btn-client">
+                    <i class="fa-solid fa-user-shield"></i> Client Area
+                </a>
+
             </div>
+
         </div>
     </header>
 
+    <!-- VPS SECTION -->
     <section class="pricing-section" style="padding-top: 160px;">
+
         <div class="section-header">
             <div class="mini-badge">ENTERPRISE CLOUD</div>
             <h2>High-Tier VPS Virtual Machines</h2>
-            <p>Deploy lightning-fast instances powered by <span class="text-blue">Intel Xeon Compute Nodes</span> & ultra-low latency <span class="text-pink">NVMe SSD Arrays</span></p>
+            <p>Deploy powerful cloud instances with NVMe storage & Xeon compute nodes</p>
         </div>
 
         <div class="pricing-grid">
-            <div class="pricing-card tier-stone">
-                <div class="tier-id">XS</div>
-                <div class="card-top">
-                    <div>
-                        <h3>Standard XS</h3>
-                        <div class="card-price">NPR 640<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 2 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 4GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 25 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 2TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check" style="color: #3b82f6;"></i> KVM Virtualization Platform</li>
+
+            <!-- XS -->
+            <div class="pricing-card">
+                <h3>Standard XS</h3>
+                <div class="card-price">NPR 640 / Month</div>
+
+                <ul>
+                    <li>2 vCores CPU</li>
+                    <li>4GB RAM</li>
+                    <li>25GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-stone">Deploy Server</a>
+
+                <!-- DISCORD ORDER -->
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
 
-            <div class="pricing-card tier-stone">
-                <div class="tier-id">S</div>
-                <div class="card-top">
-                    <div>
-                        <h3>Standard S</h3>
-                        <div class="card-price">NPR 1,000<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 4 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 8GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 40 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 3TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check" style="color: #3b82f6;"></i> KVM Virtualization Platform</li>
+            <!-- S -->
+            <div class="pricing-card">
+                <h3>Standard S</h3>
+                <div class="card-price">NPR 1000 / Month</div>
+
+                <ul>
+                    <li>4 vCores CPU</li>
+                    <li>8GB RAM</li>
+                    <li>40GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-stone">Deploy Server</a>
+
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
 
-            <div class="pricing-card tier-stone">
-                <div class="tier-id">M</div>
-                <div class="card-top">
-                    <div>
-                        <h3>Standard M</h3>
-                        <div class="card-price">NPR 1,500<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 6 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 16GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 80 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 4TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check" style="color: #3b82f6;"></i> KVM Virtualization Platform</li>
+            <!-- M -->
+            <div class="pricing-card">
+                <h3>Standard M</h3>
+                <div class="card-price">NPR 1500 / Month</div>
+
+                <ul>
+                    <li>6 vCores CPU</li>
+                    <li>16GB RAM</li>
+                    <li>80GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-stone">Deploy Server</a>
+
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
 
-            <div class="pricing-card tier-netherite featured-glow">
+            <!-- L -->
+            <div class="pricing-card featured-glow">
                 <div class="popular-ribbon">Popular</div>
-                <div class="tier-id">L</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-netherite">Standard L</h3>
-                        <div class="card-price">NPR 2,700<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 8 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 32GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 150 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 5TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check" style="color: #8a46ff;"></i> KVM Virtualization Platform</li>
+
+                <h3>Standard L</h3>
+                <div class="card-price">NPR 2700 / Month</div>
+
+                <ul>
+                    <li>8 vCores CPU</li>
+                    <li>32GB RAM</li>
+                    <li>150GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-netherite">Deploy Server</a>
+
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
 
-            <div class="pricing-card tier-gold">
-                <div class="tier-id">XL</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-gold">Standard XL</h3>
-                        <div class="card-price">NPR 3,400<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 12 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 48GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 200 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 5.5TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check" style="color: #f1c40f;"></i> KVM Virtualization Platform</li>
+            <!-- XL -->
+            <div class="pricing-card">
+                <h3>Standard XL</h3>
+                <div class="card-price">NPR 3400 / Month</div>
+
+                <ul>
+                    <li>12 vCores CPU</li>
+                    <li>48GB RAM</li>
+                    <li>200GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-gold">Deploy Server</a>
+
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
 
-            <div class="pricing-card tier-thunder">
-                <div class="tier-id">XXL</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-thunder">Standard XXL</h3>
-                        <div class="card-price">NPR 4,350<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-microchip"></i> Intel Xeon · 14 vCores</li>
-                    <li><i class="fa-solid fa-memory"></i> 64GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-database"></i> 250 GB NVMe Storage</li>
-                    <li><i class="fa-solid fa-network-wired"></i> 6TB Bandwidth · 1 Gbps</li>
-                    <li><i class="fa-solid fa-circle-check"></i> KVM Virtualization Platform</li>
+            <!-- XXL -->
+            <div class="pricing-card">
+                <h3>Standard XXL</h3>
+                <div class="card-price">NPR 4350 / Month</div>
+
+                <ul>
+                    <li>14 vCores CPU</li>
+                    <li>64GB RAM</li>
+                    <li>250GB NVMe Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-thunder">Deploy Server</a>
+
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order">
+                    Deploy Server
+                </a>
             </div>
+
         </div>
     </section>
 
+    <!-- INFO -->
     <div class="alert-section">
         <div class="alert-pill">
             <i class="fa-solid fa-circle-info"></i>
-            <p>All virtual machine arrays are delivered with absolute Root SSH permissions and localized custom OS installations.</p>
+            <p>All VPS orders are handled via Discord ticket system for instant activation.</p>
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
-        <p class="mojang-notice">Unity Hosting is an independent hosting provider and is not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2026 Unity Hosting. All rights reserved.</p>
+        <p>Independent infrastructure provider.</p>
     </footer>
 
+    <!-- SCRIPT -->
     <script>
-        // Preloader Fade Out Trigger
         window.addEventListener("load", function () {
-            const preloader = document.getElementById("site-preloader");
-            preloader.classList.add("fade-out");
-            setTimeout(() => { preloader.style.display = "none"; }, 600);
+            document.getElementById("site-preloader").style.display = "none";
         });
 
-        // Mobile Menu Interactivity Runtime
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+            const icon = menuBtn.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-xmark");
         });
     </script>
 
