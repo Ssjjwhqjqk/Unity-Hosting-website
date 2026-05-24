@@ -3,280 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Unity Hosting | Premium Infrastructure</title>
+<title>Unity Hosting</title>
 
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-
-/* GLOBAL */
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0b0f1a;
-    color:#fff;
-}
-
-/* NAVBAR */
-.navbar{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(10,14,25,0.85);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,0.08);
-    z-index:1000;
-}
-
-.nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:12px 5%;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.nav-logo{
-    width:40px;
-    border-radius:8px;
-}
-
-.brand-text{
-    font-size:18px;
-    font-weight:bold;
-}
-
-.accent-text{
-    color:#6c5ce7;
-}
-
-.nav-actions{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-/* BUTTONS */
-.nav-btn{
-    padding:8px 14px;
-    border-radius:10px;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    color:#fff;
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.1);
-    transition:0.25s;
-}
-
-.nav-btn:hover{
-    transform:translateY(-2px);
-    border-color:#6c5ce7;
-    background:rgba(108,92,231,0.2);
-}
-
-.primary{
-    background:#6c5ce7;
-    border:none;
-}
-
-.primary:hover{
-    background:#5848d6;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:0 20px;
-    background:radial-gradient(circle at top, #1a1f3a, #0b0f1a);
-}
-
-.hero h1{
-    font-size:42px;
-    margin:10px 0;
-}
-
-.hero p{
-    opacity:0.8;
-    max-width:600px;
-    margin:auto;
-}
-
-/* CTA */
-.cta{
-    margin-top:25px;
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.cta a{
-    padding:12px 18px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.25s;
-}
-
-.cta-primary{
-    background:#6c5ce7;
-    color:#fff;
-}
-
-.cta-secondary{
-    border:1px solid rgba(255,255,255,0.2);
-    color:#fff;
-}
-
-.cta a:hover{
-    transform:translateY(-3px);
-}
-
-/* QUICK CARDS */
-.cards{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:20px;
-    border-radius:14px;
-    text-decoration:none;
-    color:#fff;
-    transition:0.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#6c5ce7;
-    background:rgba(108,92,231,0.15);
-}
-
-.card i{
-    font-size:22px;
-    color:#6c5ce7;
-    margin-bottom:10px;
-    display:block;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    opacity:0.6;
-    border-top:1px solid rgba(255,255,255,0.08);
-    margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    .cards{grid-template-columns:1fr;}
-    .hero h1{font-size:32px;}
-}
-
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-    <div class="nav-container">
+<div class="nav-container">
 
-        <div class="logo-area">
-            <img src="./logo.jpg" class="nav-logo" alt="logo">
-            <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
-        </div>
+<div class="logo-area">
+<img src="./logo.jpg" class="nav-logo">
+<span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
+</div>
 
-        <div class="nav-actions">
+<div class="nav-actions">
+<a href="https://panel.unityhosting.online/" class="btn-client">Client Panel</a>
+</div>
 
-            <a href="https://panel.unityhosting.online/" class="nav-btn primary">
-                <i class="fa-solid fa-user"></i> Client Panel
-            </a>
-
-            <a href="https://discord.gg/SBJPW7dRhM" class="nav-btn">
-                <i class="fa-brands fa-discord"></i>
-            </a>
-
-            <a href="https://www.facebook.com/share/1GbAYg3ZsM/" class="nav-btn">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-
-            <a href="https://www.instagram.com/unityhosting_np?igsh=NXRjMzMwbDNka3U4" class="nav-btn">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-        </div>
-
-    </div>
+</div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero-section">
+<div class="hero-container">
 
-    <div>
+<div>
+<div class="mini-badge">BUILT IN NEPAL 🇳🇵</div>
 
-        <h1>Premium Hosting Built for Performance</h1>
+<h1 class="hero-title">
+Premium <span class="gradient-title">Hosting</span>
+</h1>
 
-        <p>
-            High-speed Minecraft, VPS, and Domain hosting powered by modern infrastructure.
-            Built in Nepal 🇳🇵 — Trusted globally.
-        </p>
+<p class="hero-subtitle">
+Minecraft • VPS • Domains — Fast, Secure & Scalable Infrastructure
+</p>
 
-        <div class="cta">
-            <a href="https://panel.unityhosting.online/" class="cta-primary">
-                🚀 Open Client Panel
-            </a>
+<div class="hero-actions">
+<a href="minecraft.html" class="btn-primary-purple">Minecraft</a>
+<a href="vps.html" class="btn-secondary-dark">VPS Hosting</a>
+</div>
 
-            <a href="minecraft.html" class="cta-secondary">
-                🎮 Explore Services
-            </a>
-        </div>
+</div>
 
-        <div class="cards">
-
-            <a href="minecraft.html" class="card">
-                <i class="fa-solid fa-gamepad"></i>
-                Minecraft Hosting
-            </a>
-
-            <a href="vps.html" class="card">
-                <i class="fa-solid fa-server"></i>
-                VPS Hosting
-            </a>
-
-            <a href="domains.html" class="card">
-                <i class="fa-solid fa-globe"></i>
-                Domain Services
-            </a>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 Unity Hosting • All Rights Reserved • Nepal 🇳🇵
-</footer>
 
 </body>
 </html>
