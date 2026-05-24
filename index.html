@@ -7,6 +7,8 @@
 
 <body>
 
+<div id="particles"></div>
+
 <header class="navbar">
 <div class="nav-container">
 
@@ -22,12 +24,18 @@
 
 <section class="hero">
 
-<h1>Premium <span class="gradient">Hosting</span></h1>
-<p class="sub">Minecraft • VPS • Domains — Fast & Global Infrastructure</p>
+<h1>Next Gen <span class="gradient">Hosting</span></h1>
+<p class="sub">
+Minecraft • VPS • Domains — Fast, Secure & Powered by Cloud Infrastructure
+</p>
+
+<a class="btn" href="minecraft.html">Minecraft</a>
+<a class="btn" href="vps.html">VPS</a>
+<a class="btn" href="domains.html">Domains</a>
 
 <div class="socials">
 <a href="https://facebook.com/share/1GbAYg3ZsM/">Facebook</a>
-<a href="https://www.instagram.com/unityhosting_np">Instagram</a>
+<a href="https://www.instagram.com/unityhosting_np/">Instagram</a>
 <a href="https://discord.gg/SBJPW7dRhM">Discord</a>
 </div>
 
@@ -39,23 +47,23 @@
 
 <div class="grid">
 
-<a href="minecraft.html" class="card">
+<div class="card">
 <h3>Minecraft Hosting</h3>
-<p>Best Game Servers</p>
-<div class="btn">View Plans</div>
-</a>
+<p>High performance game servers</p>
+<a class="btn" href="minecraft.html">View Plans</a>
+</div>
 
-<a href="vps.html" class="card">
+<div class="card">
 <h3>VPS Hosting</h3>
-<p>High Performance Cloud</p>
-<div class="btn">View Plans</div>
-</a>
+<p>Cloud powered virtual servers</p>
+<a class="btn" href="vps.html">View Plans</a>
+</div>
 
-<a href="domains.html" class="card">
+<div class="card">
 <h3>Domain Hosting</h3>
-<p>Register your domain</p>
-<div class="btn">View Plans</div>
-</a>
+<p>Register your domains instantly</p>
+<a class="btn" href="domains.html">View Plans</a>
+</div>
 
 </div>
 
@@ -64,6 +72,28 @@
 <footer>
 © 2026 Unity Hosting
 </footer>
+
+<script>
+for(let i=0;i<60;i++){
+let d=document.createElement("div");
+d.style.position="absolute";
+d.style.width="3px";
+d.style.height="3px";
+d.style.background="white";
+d.style.opacity="0.2";
+d.style.left=Math.random()*100+"%";
+d.style.top=Math.random()*100+"%";
+d.style.animation="float 10s linear infinite";
+document.getElementById("particles").appendChild(d);
+}
+</script>
+
+<style>
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-1000px);}
+}
+</style>
 
 </body>
 </html>
