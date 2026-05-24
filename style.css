@@ -78,6 +78,22 @@ body {
     gap: 20px;
 }
 
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: url(#logoGradient);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .brand {
     font-size: 1.3rem;
     font-weight: 800;
@@ -160,7 +176,7 @@ body {
 }
 
 .hero {
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,32 +355,6 @@ body {
     content: "✓";
     color: var(--purple);
     font-weight: bold;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.socials a {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border);
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.socials a:hover {
-    transform: translateY(-3px);
-    border-color: var(--purple);
-    background: rgba(138, 70, 255, 0.05);
 }
 
 .footer {
