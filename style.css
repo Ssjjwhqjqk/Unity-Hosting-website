@@ -31,14 +31,13 @@ body {
     position: relative;
 }
 
-/* Moving Background Gradient Effect */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Background Ambient Blur Orbs */
+/* Atmospheric Glowing Backdrop Orbs */
 .bg-glow-wrapper {
     position: fixed;
     inset: 0;
@@ -79,6 +78,7 @@ body {
     100% { transform: translate(0, 0) rotate(360deg); }
 }
 
+/* Floating Space Particles Background */
 #particles {
     position: fixed;
     inset: 0;
@@ -100,7 +100,7 @@ body {
     to { transform: translateY(-10vh) scale(1.2); opacity: 0; }
 }
 
-/* Navbar & Brand Logo Styling */
+/* Navigation Bar */
 .navbar {
     position: fixed;
     top: 0;
@@ -132,10 +132,10 @@ body {
     gap: 12px;
 }
 
-/* Image Logo styles */
+/* Custom Image Logo Scaling and Tuning */
 .brand-image-logo {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -203,6 +203,7 @@ body {
     color: white;
 }
 
+/* Buttons */
 .btn {
     padding: 10px 20px;
     border-radius: 10px;
@@ -215,11 +216,36 @@ body {
     font-size: 0.9rem;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(138, 70, 255, 0.3);
+}
+
+/* Sections Layout */
+.section {
+    max-width: 1300px;
+    margin: auto;
+    padding: 80px 24px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 1.1rem;
 }
 
 /* Hero Section */
@@ -283,7 +309,7 @@ body {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Metrics Displays */
+/* Core Dashboard Metrics */
 .metrics-row {
     display: flex;
     justify-content: center;
@@ -316,36 +342,14 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Sections & Structural Grids */
-.section {
-    max-width: 1300px;
-    margin: auto;
-    padding: 80px 24px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.section-title p {
-    color: var(--muted);
-    font-size: 1.1rem;
-}
-
+/* Grid Layout system */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 25px;
 }
 
+/* Glassmorphism Cards */
 .card {
     background: var(--card);
     border: 1px solid var(--border);
