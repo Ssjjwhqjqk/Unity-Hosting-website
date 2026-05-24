@@ -1,27 +1,75 @@
-<section class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS Hosting • Unity Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<h2 class="title">VPS Hosting</h2>
+    <div id="particles"></div>
 
-<div class="grid">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="brand">Unity <span class="gradient-text">Hosting</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="minecraft.html">Minecraft</a>
+                <a href="vps.html">VPS Hosting</a>
+                <a href="domains.html">Domains</a>
+            </div>
+            <a href="https://discord.gg/SBJPW7dRhM" class="btn">Join Discord</a>
+        </div>
+    </nav>
 
-<div class="card">
-<h3>XS VPS</h3>
-<p>4GB RAM — NPR 640</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
-</div>
+    <section class="hero">
+        <div class="hero-content" style="max-width: 1250px; width: 100%;">
+            <div class="badge">Scalable & Fast</div>
+            <h2 style="font-size: 3rem; margin-bottom: 40px; font-weight: 900;">VPS Hosting</h2>
 
-<div class="card">
-<h3>Medium VPS</h3>
-<p>16GB RAM — NPR 1500</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
-</div>
+            <div class="grid">
+                <div class="card">
+                    <h3>XS VPS</h3>
+                    <div class="price" style="font-size: 2rem; margin: 15px 0;">NPR 640</div>
+                    <p>4GB RAM Infrastructure</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
+                </div>
 
-<div class="card">
-<h3>Ultra VPS</h3>
-<p>64GB RAM — NPR 4350</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
-</div>
+                <div class="card">
+                    <h3>Medium VPS</h3>
+                    <div class="price" style="font-size: 2rem; margin: 15px 0;">NPR 1500</div>
+                    <p>16GB RAM Infrastructure</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
+                </div>
 
-</div>
+                <div class="card">
+                    <h3>Ultra VPS</h3>
+                    <div class="price" style="font-size: 2rem; margin: 15px 0;">NPR 4350</div>
+                    <p>64GB RAM Infrastructure</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Deploy</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <footer class="footer">
+        © 2026 Unity Hosting • Premium Cloud Infrastructure
+    </footer>
+
+    <script>
+        for(let i=0; i<80; i++){
+            let d = document.createElement('div');
+            d.className = 'particle';
+            d.style.left = Math.random()*100+'%';
+            d.style.top = Math.random()*100+'%';
+            d.style.animationDuration = (Math.random()*10+10)+'s';
+            d.style.opacity = Math.random();
+            d.style.width = d.style.height = (Math.random()*4+2)+'px';
+            document.getElementById('particles').appendChild(d);
+        }
+    </script>
+</body>
+</html>
