@@ -1,79 +1,92 @@
 <!DOCTYPE html>
-<div class="hero-content">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Hosting • Premium Cloud Infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="badge">🇳🇵 Nepal Powered • Global Infrastructure</div>
+    <div id="particles"></div>
 
-<h1>
-Next Generation <br>
-<span class="gradient-text">Cloud Hosting</span>
-</h1>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="brand">Unity <span class="gradient-text">Hosting</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="minecraft.html">Minecraft</a>
+                <a href="vps.html">VPS Hosting</a>
+                <a href="domains.html">Domains</a>
+            </div>
+            <a href="https://discord.gg/SBJPW7dRhM" class="btn">Join Discord</a>
+        </div>
+    </nav>
 
-<p>
-Deploy premium Minecraft servers, ultra-fast VPS infrastructure, and global domains powered by enterprise-grade hardware.
-</p>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🇳🇵 Nepal Powered • Global Infrastructure</div>
+            <h1>Next Generation <br><span class="gradient-text">Cloud Hosting</span></h1>
+            <p>Deploy premium Minecraft servers, ultra-fast VPS infrastructure, and global domains powered by enterprise-grade hardware.</p>
+            
+            <div class="hero-buttons">
+                <a href="minecraft.html" class="btn">Minecraft Plans</a>
+                <a href="vps.html" class="btn secondary-btn">VPS Hosting</a>
+                <a href="domains.html" class="btn secondary-btn">Domains</a>
+            </div>
 
-<div class="hero-buttons">
-<a href="minecraft.html" class="btn">Minecraft Plans</a>
-<a href="vps.html" class="btn secondary-btn">VPS Hosting</a>
-<a href="domains.html" class="btn secondary-btn">Domains</a>
-</div>
+            <div class="socials">
+                <a href="https://www.facebook.com/share/1GbAYg3ZsM/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/unityhosting_np?igsh=NXRjMzMwbDNka3U4" target="_blank">Instagram</a>
+                <a href="https://discord.gg/SBJPW7dRhM" target="_blank">Discord</a>
+            </div>
+        </div>
+    </section>
 
-<div class="socials">
-<a href="https://www.facebook.com/share/1GbAYg3ZsM/">Facebook</a>
-<a href="https://www.instagram.com/unityhosting_np?igsh=NXRjMzMwbDNka3U4">Instagram</a>
-<a href="https://discord.gg/SBJPW7dRhM">Discord</a>
-</div>
+    <section class="section">
+        <div class="section-title">
+            <h2>Premium Services</h2>
+            <p>Professional cloud infrastructure designed for performance and stability.</p>
+        </div>
 
-</div>
-</section>
+        <div class="grid">
+            <div class="card">
+                <h3>Minecraft Hosting</h3>
+                <p>High performance Minecraft hosting with premium hardware and DDoS protection.</p>
+                <a href="minecraft.html" class="btn">View Plans</a>
+            </div>
 
-<section class="section">
+            <div class="card">
+                <h3>VPS Hosting</h3>
+                <p>Deploy scalable cloud VPS instances powered by NVMe SSD infrastructure.</p>
+                <a href="vps.html" class="btn">View VPS</a>
+            </div>
 
-<div class="section-title">
-<h2>Premium Services</h2>
-<p>Professional cloud infrastructure designed for performance and stability.</p>
-</div>
+            <div class="card">
+                <h3>Domain Registry</h3>
+                <p>Secure modern domains instantly with full DNS management access.</p>
+                <a href="domains.html" class="btn">View Domains</a>
+            </div>
+        </div>
+    </section>
 
-<div class="grid">
+    <footer class="footer">
+        © 2026 Unity Hosting • Premium Cloud Infrastructure
+    </footer>
 
-<div class="card">
-<h3>Minecraft Hosting</h3>
-<p>High performance Minecraft hosting with premium hardware and DDoS protection.</p>
-<a href="minecraft.html" class="btn">View Plans</a>
-</div>
-
-<div class="card">
-<h3>VPS Hosting</h3>
-<p>Deploy scalable cloud VPS instances powered by NVMe SSD infrastructure.</p>
-<a href="vps.html" class="btn">View VPS</a>
-</div>
-
-<div class="card">
-<h3>Domain Registry</h3>
-<p>Secure modern domains instantly with full DNS management access.</p>
-<a href="domains.html" class="btn">View Domains</a>
-</div>
-
-</div>
-
-</section>
-
-<footer class="footer">
-© 2026 Unity Hosting • Premium Cloud Infrastructure
-</footer>
-
-<script>
-for(let i=0;i<80;i++){
-let d=document.createElement('div');
-d.className='particle';
-d.style.left=Math.random()*100+'%';
-d.style.top=Math.random()*100+'%';
-d.style.animationDuration=(Math.random()*10+10)+'s';
-d.style.opacity=Math.random();
-d.style.width=d.style.height=(Math.random()*4+2)+'px';
-document.getElementById('particles').appendChild(d);
-}
-</script>
-
+    <script>
+        for(let i=0; i<80; i++){
+            let d = document.createElement('div');
+            d.className = 'particle';
+            d.style.left = Math.random()*100+'%';
+            d.style.top = Math.random()*100+'%';
+            d.style.animationDuration = (Math.random()*10+10)+'s';
+            d.style.opacity = Math.random();
+            d.style.width = d.style.height = (Math.random()*4+2)+'px';
+            document.getElementById('particles').appendChild(d);
+        }
+    </script>
 </body>
 </html>
