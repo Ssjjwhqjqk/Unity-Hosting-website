@@ -1,27 +1,72 @@
-<section class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Registry • Unity Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<h2 class="title">Domain Plans</h2>
+    <div id="particles"></div>
 
-<div class="grid">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="brand">Unity <span class="gradient-text">Hosting</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="minecraft.html">Minecraft</a>
+                <a href="vps.html">VPS Hosting</a>
+                <a href="domains.html">Domains</a>
+            </div>
+            <a href="https://discord.gg/SBJPW7dRhM" class="btn">Join Discord</a>
+        </div>
+    </nav>
 
-<div class="card">
-<h3>.com</h3>
-<p>Global Domain</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
-</div>
+    <section class="hero">
+        <div class="hero-content" style="max-width: 1250px; width: 100%;">
+            <div class="badge">Instant Activation</div>
+            <h2 style="font-size: 3rem; margin-bottom: 40px; font-weight: 900;">Domain Plans</h2>
 
-<div class="card">
-<h3>.net</h3>
-<p>Network Domain</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
-</div>
+            <div class="grid">
+                <div class="card">
+                    <h3 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 10px;">.com</h3>
+                    <p>Global Domain</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
+                </div>
 
-<div class="card">
-<h3>.xyz</h3>
-<p>Modern Startup Domain</p>
-<a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
-</div>
+                <div class="card">
+                    <h3 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 10px;">.net</h3>
+                    <p>Network Domain</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
+                </div>
 
-</div>
+                <div class="card">
+                    <h3 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 10px;">.xyz</h3>
+                    <p>Modern Startup Domain</p>
+                    <a class="btn" href="https://discord.gg/SBJPW7dRhM">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <footer class="footer">
+        © 2026 Unity Hosting • Premium Cloud Infrastructure
+    </footer>
+
+    <script>
+        for(let i=0; i<80; i++){
+            let d = document.createElement('div');
+            d.className = 'particle';
+            d.style.left = Math.random()*100+'%';
+            d.style.top = Math.random()*100+'%';
+            d.style.animationDuration = (Math.random()*10+10)+'s';
+            d.style.opacity = Math.random();
+            d.style.width = d.style.height = (Math.random()*4+2)+'px';
+            document.getElementById('particles').appendChild(d);
+        }
+    </script>
+</body>
+</html>
