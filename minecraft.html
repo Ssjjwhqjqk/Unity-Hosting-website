@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Hosting • Unity Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="grid">
+    <div id="particles"></div>
 
-<div class="card">
-<h3>Wood Plan</h3>
-<div class="price">NPR 115</div>
-<ul class="features">
-<li>2GB RAM</li>
-<li>5GB NVMe SSD</li>
-<li>DDoS Protection</li>
-<li>Premium Panel</li>
-</ul>
-<a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
-</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="brand">Unity <span class="gradient-text">Hosting</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="minecraft.html">Minecraft</a>
+                <a href="vps.html">VPS Hosting</a>
+                <a href="domains.html">Domains</a>
+            </div>
+            <a href="https://discord.gg/SBJPW7dRhM" class="btn">Join Discord</a>
+        </div>
+    </nav>
 
-<div class="card">
-<h3>Stone Plan</h3>
-<div class="price">NPR 260</div>
-<ul class="features">
-<li>4GB RAM</li>
-<li>15GB NVMe SSD</li>
-<li>Premium CPU</li>
-<li>DDoS Protection</li>
-</ul>
-<a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
-</div>
+    <section class="hero">
+        <div class="hero-content" style="max-width: 1250px; width: 100%;">
+            <div class="badge">High Performance</div>
+            <h2 style="font-size: 3rem; margin-bottom: 40px; font-weight: 900;">Minecraft Plans</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Wood Plan</h3>
+                    <div class="price">NPR 115</div>
+                    <ul class="features">
+                        <li>2GB RAM</li>
+                        <li>5GB NVMe SSD</li>
+                        <li>DDoS Protection</li>
+                        <li>Premium Panel</li>
+                    </ul>
+                    <a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
+                </div>
 
-<div class="card">
-<h3>Diamond Plan</h3>
-<div class="price">NPR 869</div>
-<ul class="features">
-<li>12GB RAM</li>
-<li>35GB NVMe SSD</li>
-<li>Extreme Performance</li>
-<li>Priority Support</li>
-</ul>
-<a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
-</div>
+                <div class="card">
+                    <h3>Stone Plan</h3>
+                    <div class="price">NPR 260</div>
+                    <ul class="features">
+                        <li>4GB RAM</li>
+                        <li>15GB NVMe SSD</li>
+                        <li>Premium CPU</li>
+                        <li>DDoS Protection</li>
+                    </ul>
+                    <a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
+                </div>
 
-</div>
+                <div class="card">
+                    <h3>Diamond Plan</h3>
+                    <div class="price">NPR 869</div>
+                    <ul class="features">
+                        <li>12GB RAM</li>
+                        <li>35GB NVMe SSD</li>
+                        <li>Extreme Performance</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="https://discord.gg/SBJPW7dRhM" class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <footer class="footer">
+        Unity Hosting Minecraft Infrastructure
+    </footer>
 
-<footer class="footer">
-Unity Hosting Minecraft Infrastructure
-</footer>
-
-<script>
-for(let i=0;i<80;i++){
-let d=document.createElement('div');
-d.className='particle';
-d.style.left=Math.random()*100+'%';
-d.style.top=Math.random()*100+'%';
-d.style.animationDuration=(Math.random()*10+10)+'s';
-document.getElementById('particles').appendChild(d);
-}
-</script>
-
+    <script>
+        for(let i=0; i<80; i++){
+            let d = document.createElement('div');
+            d.className = 'particle';
+            d.style.left = Math.random()*100+'%';
+            d.style.top = Math.random()*100+'%';
+            d.style.animationDuration = (Math.random()*10+10)+'s';
+            d.style.opacity = Math.random();
+            d.style.width = d.style.height = (Math.random()*4+2)+'px';
+            document.getElementById('particles').appendChild(d);
+        }
+    </script>
 </body>
 </html>
