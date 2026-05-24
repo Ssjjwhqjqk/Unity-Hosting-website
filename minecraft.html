@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Server Plans | Unity Hosting</title>
+
     <link rel="icon" type="image/jpeg" href="./logo.jpg">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
+    <!-- PRELOADER -->
     <div id="site-preloader" class="preloader-overlay">
         <div class="preloader-content">
             <div class="premium-spinner"></div>
@@ -18,173 +21,159 @@
         </div>
     </div>
 
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-container">
+
             <div class="logo-area">
                 <img src="./logo.jpg" alt="Unity Hosting" class="nav-logo">
                 <span class="brand-text">Unity <span class="accent-text">Hosting</span></span>
             </div>
+
             <nav class="nav-menu" id="mobileMenu">
                 <a href="./index.html" class="nav-link">Home</a>
                 <a href="./minecraft.html" class="nav-link active">Minecraft Plans</a>
                 <a href="./vps.html" class="nav-link">VPS Hosting</a>
                 <a href="./domains.html" class="nav-link">Domains</a>
             </nav>
+
             <div class="nav-actions">
-                <button class="nav-toggle" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
-                <a href="https://panel.unityhosting.online/" target="_blank" class="btn-client"><i class="fa-solid fa-user-shield"></i> Client Area</a>
+
+                <button class="nav-toggle" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- FIXED: Client Area now goes to PANEL -->
+                <a href="https://panel.unityhosting.online/" target="_blank" class="btn-client">
+                    <i class="fa-solid fa-user-shield"></i> Client Area
+                </a>
+
             </div>
+
         </div>
     </header>
 
-    <section class="pricing-section" style="padding-top: 160px;">
+    <!-- PRICING -->
+    <section class="pricing-section" style="padding-top:160px;">
+
         <div class="section-header">
             <div class="mini-badge">OUR MINECRAFT PLANS</div>
             <h2>Choose the Best Plan for Your Server</h2>
-            <p>All plans feature lightning-fast node allocation with <span class="text-blue">Premium Game Panel</span> & <span class="text-pink">Advanced DDoS Shielding</span></p>
+            <p>High performance nodes with <span class="text-blue">premium panel</span> & <span class="text-pink">DDoS protection</span></p>
         </div>
 
         <div class="pricing-grid">
+
+            <!-- WOOD -->
             <div class="pricing-card tier-wood">
-                <div class="tier-id">0</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-wood">Wood Plan</h3>
-                        <div class="card-price">NPR 115<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 2GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 80% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 5GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Wood Plan</h3>
+                <div class="card-price">NPR 115 / Month</div>
+                <ul>
+                    <li>2GB RAM</li>
+                    <li>80% CPU</li>
+                    <li>5GB Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-wood">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
 
+            <!-- STONE -->
             <div class="pricing-card tier-stone">
-                <div class="tier-id">1</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-stone">Stone Plan - 1</h3>
-                        <div class="card-price">NPR 260<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 4GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 150% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 15GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Stone Plan</h3>
+                <div class="card-price">NPR 260 / Month</div>
+                <ul>
+                    <li>4GB RAM</li>
+                    <li>150% CPU</li>
+                    <li>15GB Storage</li>
                 </ul>
-                <a href="https://panel.unityhosting.online/" target="_blank" class="btn-order buy-stone">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
 
+            <!-- GOLD -->
             <div class="pricing-card tier-gold">
-                <div class="tier-id">2</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-gold">Gold Plan - 2</h3>
-                        <div class="card-price">NPR 429<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 6GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 250% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 23GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Gold Plan</h3>
+                <div class="card-price">NPR 429 / Month</div>
+                <ul>
+                    <li>6GB RAM</li>
+                    <li>250% CPU</li>
+                    <li>23GB Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-gold">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
 
+            <!-- DIAMOND -->
             <div class="pricing-card tier-diamond">
-                <div class="tier-id">3</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-diamond">Diamond Plan - 3</h3>
-                        <div class="card-price">NPR 869<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 12GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 350% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 35GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Diamond Plan</h3>
+                <div class="card-price">NPR 869 / Month</div>
+                <ul>
+                    <li>12GB RAM</li>
+                    <li>350% CPU</li>
+                    <li>35GB Storage</li>
                 </ul>
-                <a href="https://panel.unityhosting.online/" target="_blank" class="btn-order buy-diamond">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
 
+            <!-- NETHERITE -->
             <div class="pricing-card tier-netherite featured-glow">
                 <div class="popular-ribbon">Popular</div>
-                <div class="tier-id">4</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-netherite">Netherite Plan - 4</h3>
-                        <div class="card-price">NPR 1079<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 16GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 400% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 55GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Netherite Plan</h3>
+                <div class="card-price">NPR 1079 / Month</div>
+                <ul>
+                    <li>16GB RAM</li>
+                    <li>400% CPU</li>
+                    <li>55GB Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-netherite">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
 
+            <!-- THUNDER -->
             <div class="pricing-card tier-thunder">
-                <div class="tier-id">5</div>
-                <div class="card-top">
-                    <div>
-                        <h3 class="title-thunder">Thunder Plan - 5</h3>
-                        <div class="card-price">NPR 2149<span class="period">/ Month</span></div>
-                    </div>
-                </div>
-                <ul class="specs-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 32GB RAM Allocation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 600% CPU Core Limit</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 90GB NVMe Disk Storage</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Premium Node Panel</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Advance DDoS Protection</li>
+                <h3>Thunder Plan</h3>
+                <div class="card-price">NPR 2149 / Month</div>
+                <ul>
+                    <li>32GB RAM</li>
+                    <li>600% CPU</li>
+                    <li>90GB Storage</li>
                 </ul>
-                <a href="https://discord.gg/SBJPW7dRhM" target="_blank" class="btn-order buy-thunder">Choose Plan</a>
+                <a href="https://panel.unityhosting.online/" class="btn-order">Choose Plan</a>
             </div>
+
         </div>
+
     </section>
 
+    <!-- INFO -->
     <div class="alert-section">
         <div class="alert-pill">
             <i class="fa-solid fa-circle-info"></i>
-            <p>Other currency prices will be discussed in ticket or convert through Google.</p>
+            <p>Currency conversion is available via support ticket in panel.</p>
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Unity Hosting. All infrastructure modules managed securely.</p>
-        <p class="mojang-notice">Unity Hosting is an independent hosting provider and is not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2026 Unity Hosting. All rights reserved.</p>
+        <p class="mojang-notice">
+            Independent hosting provider, not affiliated with Mojang or Microsoft.
+        </p>
     </footer>
 
+    <!-- SCRIPT -->
     <script>
-        // Preloader Fade Out
+        // Preloader
         window.addEventListener("load", function () {
-            const preloader = document.getElementById("site-preloader");
-            preloader.classList.add("fade-out");
-            setTimeout(() => { preloader.style.display = "none"; }, 600);
+            document.getElementById("site-preloader").style.display = "none";
         });
 
-        // Mobile Menu Toggling Logic
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+        // Mobile menu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+
+            const icon = menuBtn.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-xmark");
         });
     </script>
 
