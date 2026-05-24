@@ -22,7 +22,7 @@
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding:20px;
+    padding:22px;
     border-radius:14px;
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.1);
@@ -42,6 +42,41 @@
     transform:translateY(-5px);
     border-color:#6c5ce7;
     background:rgba(108,92,231,0.15);
+}
+
+/* HEADER ACTION BUTTONS */
+.nav-actions{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.action-btn{
+    padding:8px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    transition:0.2s;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.05);
+}
+
+.action-btn:hover{
+    transform:translateY(-2px);
+    border-color:#6c5ce7;
+    background:rgba(108,92,231,0.15);
+}
+
+.client-btn{
+    background:#6c5ce7;
+    border:none;
+}
+
+.client-btn:hover{
+    background:#5848d6;
 }
 
 @media(max-width:900px){
@@ -70,9 +105,23 @@
         </div>
 
         <div class="nav-actions">
-            <a href="https://discord.gg/SBJPW7dRhM" class="btn-client">
-                Join Discord
+
+            <a href="https://discord.gg/SBJPW7dRhM" class="action-btn">
+                <i class="fa-brands fa-discord"></i> Discord
             </a>
+
+            <a href="https://panel.unityhosting.online/" class="action-btn client-btn">
+                <i class="fa-solid fa-user"></i> Client Panel
+            </a>
+
+            <a href="https://www.facebook.com/share/1GbAYg3ZsM/" class="action-btn">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/unityhosting_np?igsh=NXRjMzMwbDNka3U4" class="action-btn">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
         </div>
 
     </div>
@@ -124,7 +173,7 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-    <p>© 2026 Unity Hosting</p>
+    <p>© 2026 Unity Hosting • Built in Nepal 🇳🇵</p>
 </footer>
 
 </body>
