@@ -1,559 +1,79 @@
-/* ==========================================================================
-   GLOBAL STRUCTURE & BRANDING COLOR SYSTEM
-   ========================================================================== */
-:root {
-    --bg-primary: #060512;
+:root{
+    --bg-primary: #050510;
     --bg-secondary: #0d0b24;
-    --bg-card: #090816;
-    --border-color: #1a173d;
+    --bg-card: rgba(255,255,255,0.05);
+
+    --border-color: rgba(255,255,255,0.08);
+
     --text-main: #ffffff;
-    --text-secondary: #7e7b9a;
+    --text-secondary: rgba(255,255,255,0.65);
+
     --purple-primary: #8a46ff;
     --blue-accent: #3b82f6;
     --pink-accent: #ec4899;
+    --green: #22c55e;
+    --orange: #f97316;
+    --gold: #f1c40f;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* BACKGROUND UPGRADE */
+body{
+    background:
+    radial-gradient(circle at top, rgba(138,70,255,0.25), transparent 40%),
+    radial-gradient(circle at bottom, rgba(59,130,246,0.18), transparent 50%),
+    var(--bg-primary);
 }
 
-body {
-    background-color: var(--bg-primary);
-    color: var(--text-main);
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ==========================================================================
-   SITE PRELOADER OVERLAY MODULE
-   ========================================================================== */
-.preloader-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--bg-primary);
-    z-index: 999999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-.preloader-overlay.fade-out {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.preloader-content {
-    text-align: center;
-}
-
-.premium-spinner {
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(138, 70, 255, 0.1);
-    border-radius: 50%;
-    border-top-color: var(--purple-primary);
-    animation: spin 1s linear infinite;
-    margin: 0 auto 20px;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-.loading-brand {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.loading-subtext {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    margin-top: 5px;
-}
-
-/* ==========================================================================
-   NAVIGATION HEADERS & LIQUID LAYOUT SYSTEMS
-   ========================================================================== */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(6, 5, 18, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 9999;
-    padding: 20px 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+/* GLASS CARDS */
+.pricing-card{
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 28px;
+    transition: 0.3s;
 }
 
-.brand-text {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
-.accent-text {
-    color: var(--purple-primary);
-}
-
-.nav-menu {
-    display: flex;
-    gap: 32px;
-}
-
-.nav-link {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    transition: color 0.2s;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--text-main);
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.btn-client {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background 0.2s, border 0.2s;
-}
-
-.btn-client:hover {
-    background-color: var(--purple-primary);
+.pricing-card:hover{
+    transform: translateY(-10px);
     border-color: var(--purple-primary);
+    box-shadow: 0 15px 40px rgba(138,70,255,0.25);
 }
 
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-main);
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-/* ==========================================================================
-   HERO DISPLAY PANELS
-   ========================================================================== */
-.hero-section {
-    padding: 180px 0 100px;
-}
-
-.hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.premium-tag {
-    background: rgba(138, 70, 255, 0.1);
-    color: var(--purple-primary);
-    border: 1px solid rgba(138, 70, 255, 0.2);
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.15;
-    margin-bottom: 24px;
-}
-
-.gradient-title {
+/* BUTTON GRADIENT UPGRADE */
+.btn-order{
+    display:block;
+    padding: 12px;
+    text-align:center;
+    border-radius: 10px;
+    font-weight: 600;
     background: linear-gradient(135deg, var(--purple-primary), var(--blue-accent));
+    transition: 0.3s;
+    color: white;
+}
+
+.btn-order:hover{
+    transform: scale(1.05);
+}
+
+/* HERO GLOW TEXT */
+.gradient-title{
+    background: linear-gradient(135deg, #8a46ff, #3b82f6, #ec4899);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-bottom: 40px;
-    max-width: 540px;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.btn-primary-purple {
-    background-color: var(--purple-primary);
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 15px rgba(138, 70, 255, 0.3);
-}
-
-.btn-primary-purple:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(138, 70, 255, 0.4);
-}
-
-.btn-secondary-dark {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: background 0.2s, border-color 0.2s;
-}
-
-.btn-secondary-dark:hover {
-    background-color: rgba(26, 23, 61, 0.3);
-    border-color: rgba(138, 70, 255, 0.4);
-}
-
-.server-status-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.status-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    margin-bottom: 24px;
-}
-
-.status-indicator {
-    width: 8px;
-    height: 8px;
-    background-color: #10b981;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #10b981;
-}
-
-.status-specs .spec-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(26, 23, 61, 0.5);
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.status-specs .spec-row:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.text-pink { color: var(--pink-accent); }
-.text-blue { color: var(--blue-accent); }
-.text-purple { color: var(--purple-primary); }
-
-/* ==========================================================================
-   PRICING & HARDWARE ALLOCATION MATRIX GRID
-   ========================================================================== */
-.pricing-section {
-    padding: 100px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.mini-badge {
+/* BADGE GLOW */
+.mini-badge{
+    background: rgba(138,70,255,0.15);
+    padding: 6px 14px;
+    border-radius: 999px;
     color: var(--purple-primary);
-    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 16px;
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.pricing-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 40px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: border-color 0.3s, transform 0.3s;
-}
-
-.pricing-card:hover {
-    border-color: rgba(138, 70, 255, 0.3);
-    transform: translateY(-4px);
-}
-
-.pricing-card.featured-glow {
-    border-color: var(--purple-primary);
-    box-shadow: 0 10px 40px rgba(138, 70, 255, 0.15);
-}
-
-.popular-ribbon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: linear-gradient(135deg, var(--purple-primary), var(--blue-accent));
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 50px;
-    text-transform: uppercase;
-}
-
-.tier-id {
-    font-size: 4rem;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
-    position: absolute;
-    top: 15px;
-    left: 30px;
-    user-select: none;
-    line-height: 1;
-}
-
-.card-top {
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-.card-top h3 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
-
-.card-price {
-    font-size: 2.25rem;
-    font-weight: 800;
-}
-
-.card-price .period {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.specs-list {
-    list-style: none;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.specs-list li {
-    font-size: 0.95rem;
-    color: #e2e0f0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.specs-list li i {
-    width: 16px;
-    color: var(--text-secondary);
-}
-
-.btn-order {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    transition: background 0.2s, border-color 0.2s;
-}
-
-.btn-order:hover {
-    background-color: rgba(26, 23, 61, 0.5);
-}
-
-/* Custom Visual Accent Classes Mapping */
-.title-stone { color: #a1a1aa; }
-.buy-stone:hover { border-color: #a1a1aa; background-color: rgba(161, 161, 170, 0.05); }
-
-.title-gold { color: #f1c40f; }
-.buy-gold:hover { border-color: #f1c40f; background-color: rgba(241, 196, 15, 0.05); }
-
-.title-diamond { color: #2bc4c4; }
-.buy-diamond:hover { border-color: #2bc4c4; background-color: rgba(43, 196, 196, 0.05); }
-
-.title-netherite { color: #a855f7; }
-.pricing-card.tier-netherite .btn-order, .buy-netherite {
-    background: var(--purple-primary);
-    border-color: var(--purple-primary);
-    color: #fff;
-}
-.pricing-card.tier-netherite .btn-order:hover, .buy-netherite:hover {
-    background: #7326dd;
-}
-
-.title-thunder { color: #f39c12; }
-.buy-thunder:hover { border-color: #f39c12; background-color: rgba(243, 156, 18, 0.05); }
-
-/* ==========================================================================
-   ALERTS & INFORMATION PILLS
-   ========================================================================== */
-.alert-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px 100px;
-}
-
-.alert-pill {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 20px 30px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.alert-pill i {
-    color: var(--purple-primary);
-    font-size: 1.2rem;
-}
-
-.alert-pill p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* ==========================================================================
-   FOOTER SCHEMAS
-   ========================================================================== */
-.site-footer {
-    background-color: #03020a;
-    border-top: 1px solid var(--border-color);
-    padding: 40px 24px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-.mojang-notice {
-    font-size: 0.75rem;
-    margin-top: 10px;
-    color: rgba(126, 123, 154, 0.5);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ==========================================================================
-   RESPONSIVE LAYOUT RESPONSES (MEDIA QUERIES)
-   ========================================================================== */
-@media (max-width: 992px) {
-    .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-    .hero-subtitle { margin: 0 auto 40px; }
-    .hero-actions { justify-content: center; }
-    .hero-right { max-width: 500px; margin: 0 auto; width: 100%; }
-}
-
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 81px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 81px);
-        background-color: var(--bg-primary);
-        flex-direction: column;
-        padding: 40px;
-        gap: 24px;
-        transition: left 0.3s ease;
-    }
-    .nav-menu.active { left: 0; }
-    .nav-toggle { display: block; }
-    .hero-title { font-size: 2.5rem; }
+/* FEATURED CARD */
+.featured-glow{
+    border: 1px solid var(--purple-primary);
+    box-shadow: 0 0 25px rgba(138,70,255,0.2);
 }
