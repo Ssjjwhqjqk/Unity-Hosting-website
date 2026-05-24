@@ -81,12 +81,6 @@ body{
     gap:12px;
 }
 
-.nav-logo{
-    width:45px;
-    height:45px;
-    border-radius:12px;
-}
-
 .brand{
     font-size:1.3rem;
     font-weight:800;
