@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+    color: white;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161b22;
+    padding: 15px 30px;
+    border-bottom: 2px solid #21262d;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Fixed Logo Dimensions */
+.brand-image-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #58a6ff;
+}
+
+/* Social Media Icons Styling */
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-socials a {
+    color: #8b949e;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.nav-socials a:hover {
+    color: #58a6ff;
+}
+
+.nav-socials svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle, #1f2937 0%, #0d1117 100%);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #8b949e;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #238636;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #2ea043;
+}
+
+.secondary-btn {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+}
+
+.secondary-btn:hover {
+    background-color: #30363d;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #161b22;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+    color: #58a6ff;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 10px;
+    color: #c9d1d9;
+}
+
+/* Footer Style */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #161b22;
+    border-top: 2px solid #21262d;
+    color: #8b949e;
+    margin-top: 60px;
+}
