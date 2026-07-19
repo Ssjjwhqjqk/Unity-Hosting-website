@@ -141,26 +141,16 @@ nav ul li a:hover{
     background-position:center;
 }
 
-.hero::before{
-
-    content:'';
-
-    position:absolute;
-
-    width:900px;
-    height:900px;
-
-    background:
-    radial-gradient(
-    circle,
-    rgba(0,191,255,.25),
-    transparent 70%
-    );
-
-    top:-300px;
-    left:-250px;
-
-    animation:aurora 8s ease-in-out infinite;
+.hero::
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+    position:relative;
+    overflow:hidden;
 }
 
 @keyframes aurora{
