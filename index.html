@@ -264,6 +264,24 @@ throughout Nepal and worldwide.
 <a href="https://discord.gg/jduEubmYw3" class="discord-btn">
 Discord
 </a>
+  
+<div id="snow"></div>
 
+<script>
+for(let i=0;i<80;i++){
+
+const snow=document.createElement('span');
+
+snow.style.left=Math.random()*100+'vw';
+snow.style.width=(Math.random()*5+2)+'px';
+snow.style.height=snow.style.width;
+snow.style.animationDuration=(Math.random()*10+5)+'s';
+snow.style.animationDelay=Math.random()*5+'s';
+
+document.getElementById('snow').appendChild(snow);
+
+}
+</script>
+  
 </body>
 </html>
